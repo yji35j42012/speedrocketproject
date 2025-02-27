@@ -1,0 +1,336 @@
+.news {
+	// .news_group
+	&_group {
+		margin-top: 27px;
+		@include mw(L) {
+			margin-top: 30px;
+		}
+	}
+	// .news_item
+	&_item {
+		@include d_f(flex, center, center);
+		padding: 70px 0;
+		@include mw(L) {
+			flex-direction: column;
+			max-width: 574px;
+			margin: auto;
+			padding: 36px 0 28px;
+		}
+		&:first-child {
+			padding-top: 0;
+		}
+		& + & {
+			border-top: 1px solid #979797;
+		}
+		// .news_item_pic
+		&_pic {
+			overflow: hidden;
+			width: 100%;
+			max-width: 574px;
+			min-width: 535px;
+			margin-right: 45px;
+			border-radius: 18px;
+			@include mw(XL) {
+				margin-right: 20px;
+			}
+			@include mw(L) {
+				min-width: unset;
+				margin-right: 0;
+			}
+		}
+		// .news_item_info
+		&_info {
+			@include d_f(flex, center);
+			flex-direction: column;
+			width: 100%;
+			@include mw(L) {
+				max-width: 574px;
+				margin-top: 12px;
+			}
+			.new {
+				@include d_f(flex, none, center);
+				box-sizing: border-box;
+				&::after {
+					content: "NEW";
+					@include d_f(flex, center, center);
+					margin-left: 28px;
+					width: 58px;
+					height: 26px;
+					font-weight: 400;
+					font-size: 16px;
+					background-color: #bda782;
+					color: #ffffff;
+					border-radius: 100px;
+					box-sizing: border-box;
+					@include mw(L) {
+						width: 47px;
+						height: 20px;
+						margin-left: 14px;
+						font-size: 14px;
+						font-size: 14px;
+					}
+				}
+			}
+			.name {
+				overflow: hidden;
+				display: -webkit-box;
+				max-height:92px;
+				margin-top: 12px;
+				font-weight: 600;
+				font-size: 34px;
+				line-height: 46px;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				@include minmw(L) {
+					.en & {
+						font-size: 32px;
+					}
+				}
+				@include mw(L) {
+					margin-top: 9px;
+					font-size: 22px;
+					line-height: 30px;
+				}
+			}
+			.detail {
+				overflow: hidden;
+				display: -webkit-box;
+				margin-top: 15px;
+				-webkit-box-orient: vertical; /* 用來設定一個元素是水平還是垂直方向排列其內容 */
+				-webkit-line-clamp: 2; /* 限制指定的行數 */
+				/* 其它瀏覽器降級方式：給定最大高度 */
+				/*max-height:48px;*/
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 33px;
+				word-break: break-all;
+				@include minmw(L) {
+					.en & {
+						font-size: 18px;
+					}
+				}
+				@include mw(L) {
+					margin-top: 8px;
+					font-size: 16px;
+					line-height: 22px;
+					-webkit-line-clamp: 1; /* 限制指定的行數 */
+				}
+			}
+			.normal_btn {
+				@include mw(L) {
+					font-size: 14px;
+				}
+			}
+			.btnBox {
+				margin-top: 30px;
+				text-align: right;
+				@include mw(L) {
+					margin: 12px auto 0;
+				}
+			}
+		}
+	}
+	// .news_head
+	&_head {
+		@include d_f(flex);
+		flex-wrap: wrap;
+	}
+	// .news_date
+	&_date {
+		width: 100%;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 28px;
+		text-align: left;
+		@include mw(L) {
+			width: auto;
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
+	// .news_name
+	&_name {
+		width: 100%;
+		margin-top: 22px;
+		padding-left: 16px;
+		font-weight: 600;
+		font-size: 42px;
+		line-height: 57px;
+		border-left: 6px solid #bda782;
+		text-align: left;
+		@include minmw(L) {
+			.en & {
+				font-size: 38px;
+			}
+		}
+		@include mw(L) {
+			margin-top: 24.5px;
+			font-size: 24px;
+			line-height: 33px;
+		}
+	}
+	// .news_tag
+	&_tag {
+		@include d_f(flex, none, center);
+		margin-top: 31px;
+		// .news_tag_item
+		&_item {
+			@include d_f(flex, none, center);
+			padding: 4px 15px;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 27px;
+			background: #a3a3a3;
+			color: #fff;
+			border-radius: 100px;
+			@extend %transition;
+			@extend %hand;
+			&::before {
+				content: attr(data-tag);
+			}
+			@include hoverHandler {
+				background-color: #333;
+			}
+			@include minmw(L) {
+				.en & {
+					font-size: 16px;
+				}
+			}
+			@include mw(L) {
+				padding-left: 8px;
+				font-size: 14px;
+				line-height: 19px;
+			}
+			& + & {
+				margin-left: 15px;
+				@include mw(L) {
+					margin-left: 12px;
+				}
+			}
+		}
+	}
+	// .news_community
+	&_community {
+		@include d_f(flex, none, center);
+		margin-left: auto;
+		@include mw(L) {
+			position: absolute;
+			top: 27px;
+			right: 29px;
+		}
+		// .news_community_item
+		&_item {
+			position: relative;
+			flex: none;
+			@include d_f(flex, center, center);
+			width: 52px;
+			height: 52px;
+			background-color: #bda782;
+			border-radius: 100px;
+			@extend %transition;
+			@extend %hand;
+			&::after {
+				content: attr(data-txt);
+				position: absolute;
+				bottom: calc(100% + 15px);
+				display: block;
+				padding: 5px 9px;
+				color: #ffffff;
+				background-color: #333;
+				font-weight: 400;
+				font-size: 14px;
+				white-space: nowrap;
+				opacity: 0;
+				transition-duration: 0.3s;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: calc(100% + 5px);
+				display: block;
+				width: 24px;
+				height: 17px;
+				background: url("../images/news/shareBg.svg") no-repeat
+					center/contain;
+				opacity: 0;
+				transition-duration: 0.3s;
+			}
+			@include hoverHandler {
+				background-color: #333333;
+				&::before,
+				&::after {
+					opacity: 1;
+				}
+			}
+
+			@include mw(L) {
+				width: 28px;
+				height: 28px;
+			}
+			& + & {
+				margin-left: 16px;
+				@include mw(L) {
+					margin-left: 12px;
+				}
+			}
+			&._fb {
+				position: relative;
+				.fb_iframe_widget {
+					span {
+						width: 100% !important;
+						height: 100% !important;
+					}
+				}
+				img {
+					width: 19px;
+					@include mw(L) {
+						width: 10px;
+					}
+				}
+			}
+			&._twitter {
+				img {
+					width: 30px;
+					@include mw(L) {
+						width: 16px;
+					}
+				}
+			}
+			&._in {
+				img {
+					width: 28px;
+					@include mw(L) {
+						width: 15px;
+					}
+				}
+			}
+		}
+	}
+
+	// .news_content
+	&_content {
+		margin-top: 31px;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 160%;
+		white-space: pre-line;
+		text-align: left;
+		@include minmw(L) {
+			.en & {
+				font-size: 20px;
+			}
+		}
+		@include mw(L) {
+			font-size: 16px;
+		}
+	}
+	// .news_img
+	&_img {
+		overflow: hidden;
+		width: 100%;
+		max-width: 865px;
+		margin: 67px auto 0;
+		// padding: 0 36px;
+		border-radius: 30px;
+	}
+}

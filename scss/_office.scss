@@ -1,0 +1,364 @@
+.office {
+	padding-top: 74px;
+	padding-bottom: 156px;
+	background-color: #fff;
+	@include mw(L) {
+		padding-top: 34px;
+		padding-bottom: 58px;
+	}
+	// .office_txt
+	&_txt {
+		max-width: 1170px;
+		margin: 52px auto 0;
+		text-align: center;
+		@include mw(L) {
+			max-width: 576px;
+			margin-top: 28px;
+			text-align: left;
+		}
+	}
+
+	// .office_tw
+	&_tw {
+		@include d_f(flex, center, center);
+		max-width: 1260px;
+		margin: 74px auto 0;
+		@include mw(L) {
+			max-width: 576px;
+			flex-direction: column;
+		}
+		// .office_tw_pic
+		&_pic {
+			max-width: 772px;
+			filter: drop-shadow(-20px -21px 0px rgba(0, 0, 0, 0.05));
+			@include mw(L) {
+				filter: drop-shadow(-5px -6px 0px rgba(0, 0, 0, 0.05));
+			}
+		}
+		// .office_tw_detail
+		&_detail {
+			display: inline-block;
+			width: 100%;
+			max-width: 488px;
+			padding: 38px 0;
+			background-color: #ebdec7;
+			text-align: center;
+			@include mw(L) {
+				max-width: 100%;
+				padding: 15px 0;
+			}
+		}
+		// .office_tw_name
+		&_name {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 34px;
+			line-height: 46px;
+			@include mw(L) {
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+		// .office_tw_phone
+		&_phone {
+			margin-top: 8px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 33px;
+			@include mw(L) {
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		// .office_tw_address
+		&_address {
+			margin-top: 8px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 27px;
+			@include mw(L) {
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		// .office_tw_timeTxt
+		&_timeTxt {
+			display: inline-block;
+			margin: 44px 0 0;
+			padding: 4px 33px;
+			background-color: #000;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 27px;
+			color: #ffffff;
+			@include mw(L) {
+				margin-top: 22px;
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+		// .office_tw_time
+		&_time {
+			flex-wrap: wrap;
+			margin-top: 17px;
+			.info {
+				display: inline-block;
+				margin-top: 16px;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 140%;
+				@include mw(L) {
+					font-weight: 400;
+					font-size: 12px;
+				}
+				&:nth-child(1) {
+					padding-right: 18px;
+					margin-left: auto;
+					border-right: 1px solid #887766;
+				}
+				&:nth-child(2) {
+					padding-left: 18px;
+				}
+				&::before {
+					content: attr(data-week);
+					display: block;
+				}
+				&::after {
+					content: attr(data-time);
+					display: block;
+				}
+			}
+		}
+	}
+
+	// .office_area
+	&_area {
+		margin-top: 74px;
+		@include mw(L) {
+			max-width: 576px;
+			margin: 53px auto 0;
+			border-bottom: 1px solid #887766;
+			&._borderT {
+				border-top: 1px solid #887766;
+			}
+		}
+		// .office_area_title
+		&_title {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 38px;
+			span {
+				font-weight: 600;
+				font-size: 28px;
+				line-height: 38px;
+			}
+			text-align: center;
+			color: #887766;
+			transition-duration: 0.3s;
+			.icon_trangle {
+				display: none;
+			}
+			&.on {
+				background-color: #887766;
+				color: #fff;
+				.icon_trangle {
+					transform: rotate(0);
+					fill: #fff;
+				}
+			}
+			@include mw(L) {
+				@include d_f(flex, space-between, center);
+				width: 100%;
+				height: 60px;
+				padding: 0 13px;
+				font-size: 18px;
+				span {
+					font-size: 18px;
+				}
+				.officeOver & {
+					justify-content: center;
+				}
+				.icon_trangle {
+					position: relative;
+					display: block;
+					transition-duration: 0.3s;
+					transform: rotate(180deg);
+					transform-origin: center center;
+					fill: #887766;
+				}
+			}
+		}
+		// .office_area_group
+		&_group {
+			@include d_f(flex, center, center);
+			flex-wrap: wrap;
+			max-width: 1280px;
+			margin-top: 29px;
+			@extend %transition;
+			@include mw(L) {
+				display: block;
+				.office & {
+					overflow: hidden;
+					height: 0;
+					margin-top: 0;
+				}
+			}
+		}
+		// .office_area_item
+		&_item {
+			position: relative;
+			@include d_f(flex, center, center);
+			flex-direction: column;
+			width: calc(100% / 3);
+			max-width: 420px;
+			min-height: 278px;
+			padding: 12px;
+			text-align: center;
+			border-bottom: 1px solid #d9d9d9;
+			.officeOver & {
+				width: calc(100% / 2);
+			}
+			@include mw(L) {
+				width: 100%;
+				max-width: 100%;
+				min-height: 120px;
+				margin: auto;
+				padding: 25px 5px;
+				.officeOver & {
+					width: 100%;
+				}
+				.officeOver &:first-child {
+					border-top: 1px solid #d9d9d9;
+				}
+			}
+			@include minmw(L) {
+				.office &:not(:nth-child(3n + 1)):after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					width: 1px;
+					height: 180px;
+					margin: auto;
+					background-color: #d9d9d9;
+				}
+				.officeOver &:nth-child(even):after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					width: 1px;
+					height: 180px;
+					margin: auto;
+					background-color: #d9d9d9;
+				}
+			}
+		}
+		// .office_area_ani
+		&_ani {
+			.office_area_item {
+				transition-duration: 0.3s;
+				transform: scale(0, 0);
+				transform-origin: center center;
+			}
+			&.on {
+				.office_area_item {
+					transform: scale(1, 1);
+				}
+			}
+		}
+		// .office_area_name
+		&_name {
+			position: relative;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 26px;
+			line-height: 35px;
+			@include mw(L) {
+				font-size: 16px;
+				line-height: 22px;
+			}
+			&._new {
+				@include d_f(flex, center, center);
+				flex-direction: column;
+				&::before {
+					content: attr(data-new);
+					position: absolute;
+					bottom: calc(100% + 20px);
+					display: inline-block;
+					padding: 4px 10px;
+					background-color: #bda782;
+					border-radius: 100px;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 18px;
+					color: #fff;
+					@include mw(L) {
+						position: relative;
+						margin-bottom: 10px;
+						font-size: 12px;
+						line-height: 14px;
+					}
+				}
+			}
+		}
+		// .office_area_phone
+		&_phone {
+			margin-top: 16px;
+			@include mw(L) {
+				margin-top: 8px;
+			}
+		}
+		// .office_area_address
+		&_address {
+			margin-top: 16px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 27px;
+			@include mw(L) {
+				margin-top: 8px;
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		// .office_area_logo
+		&_logo {
+			margin-bottom: 16px;
+			&._pnj {
+				max-width: 149px;
+				@include mw(L) {
+					min-width: 118px;
+				}
+			}
+			&._maxelbeauty {
+				max-width: 73px;
+			}
+		}
+		& + & {
+			margin-top: 74px;
+			@include mw(L) {
+				margin-top: 0;
+			}
+		}
+	}
+	// .office_nodata
+	&_nodata {
+		margin-top: 177px;
+		margin-bottom: 134px;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 140%;
+		text-align: center;
+		color: rgba(51, 51, 51, 0.6);
+	}
+}

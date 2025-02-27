@@ -1,0 +1,206 @@
+.vision {
+	// .vision_txt
+	&_txt {
+		margin: 112px auto 0;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 160%;
+		text-align: center;
+		@include mw(L) {
+			max-width: 574px;
+			margin-top: 38px;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 160%;
+		}
+		@include mw(XS) {
+			max-width: 338px;
+		}
+		&:not(._bg) {
+			position: relative;
+			width: 100%;
+			padding-bottom: 131px;
+			@include mw(L) {
+				padding-bottom: 58px;
+				text-align: left;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				display: block;
+				width: calc(100% - 100px);
+				height: 1px;
+				margin: auto;
+				background-color: #b0b0b0;
+			}
+			& + h2 {
+				margin-top: 100px;
+				@include mw(L) {
+					margin-top: 68px;
+				}
+			}
+		}
+		&._bg {
+			margin-top: 60px;
+			padding: 75px 185px;
+			background-color: rgba(235, 222, 199, 0.5);
+			@include mw(L) {
+				margin-top: 35px;
+				padding: 25px 10px;
+			}
+
+			& + h2 {
+				@include d_f (flex,center,center);
+				margin-top: 110px;
+				@include mw(L) {
+					margin-top: 82px;
+				}
+			}
+		}
+	}
+
+	// .vision_pics
+	&_pics {
+		@include d_f(flex);
+		&._third {
+			margin-top: 158px;
+			@include mw(L) {
+				max-width: 574px;
+				margin: 57px auto 0;
+				.vision_pics_pic:nth-child(3) {
+					display: none;
+				}
+			}
+			@include mw(XS) {
+				max-width: 338px;
+			}
+		}
+		// .vision_pics_pic
+		&_pic {
+			width: calc(100% / 3 - 16px);
+			@include mw(L) {
+				width: calc(100% / 2 - 10px);
+			}
+			&:nth-child(1) {
+				position: relative;
+				top: -92px;
+				@include mw(L) {
+					top: -21px;
+				}
+			}
+			&:nth-child(2) {
+				position: relative;
+				top: -50px;
+				@include mw(L) {
+					top: 0;
+				}
+			}
+			& + & {
+				margin-left: 24px;
+				@include mw(L) {
+					margin-left: 10px;
+				}
+			}
+		}
+		&._phone {
+			max-width: 770px;
+			margin: 60px auto 0;
+			@include mw(L) {
+				max-width: 574px;
+				margin: 38px auto 0;
+			}
+			@include mw(XS) {
+				max-width: 295px;
+			}
+		}
+	}
+
+	// .vision_history
+	&_history {
+		max-width: 836px;
+		margin: 58px auto 0;
+		@include mw(L) {
+			max-width: 574px;
+			margin-top: 48px;
+		}
+		@include mw(XS) {
+			max-width: 338px;
+		}
+		// .vision_history_item
+		&_item {
+			& + & {
+				&::before {
+					content: "";
+					display: block;
+					width: 3px;
+					height: 62px;
+					margin: 16px auto;
+					background-color: #dfc9a4;
+					@include mw(L) {
+						width: 2px;
+						height: 34px;
+						margin: 12px auto;
+					}
+				}
+			}
+			.title {
+				font-style: normal;
+				font-weight: 700;
+				font-size: 64px;
+				line-height: 74px;
+				color: #dfc9a4;
+				text-align: center;
+				@include mw(L) {
+					font-size: 24px;
+					line-height: 28px;
+				}
+			}
+			.txt {
+				margin-top: 16px;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 34px;
+				line-height: 46px;
+				text-align: center;
+				@include mw(L) {
+					margin-top: 12px;
+					font-size: 16px;
+					line-height: 22px;
+					text-align: center;
+				}
+				& + .txt {
+					&::before {
+						content: "";
+						display: block;
+						width: 3px;
+						height: 62px;
+						margin: 16px auto;
+						background-color: #dfc9a4;
+						@include mw(L) {
+							width: 2px;
+							height: 34px;
+							margin: 12px auto;
+						}
+					}
+				}
+			}
+		}
+
+		& + .vision_pics {
+			max-width: 1142px;
+			margin: 60px auto 0;
+			@include mw(L) {
+				max-width: 574px;
+				margin: 33px auto 0;
+			}
+			@include mw(XS) {
+				max-width: 338px;
+			}
+		}
+	}
+}

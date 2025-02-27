@@ -1,0 +1,578 @@
+.recruitment {
+
+	// .recruitment_term
+	&_term {
+		position: sticky;
+		top: 135px;
+		@include d_f(inline-flex, center, center);
+		width: 100%;
+		margin-top: 64px;
+		padding: 0 45px;
+		z-index: 1;
+
+		@include mw(L) {
+			display: none;
+		}
+
+		// .recruitment_term_li
+		&_li {
+			position: relative;
+			display: block;
+			width: calc(100% / 5);
+			padding: 23px 0;
+			background-color: #fff;
+			text-align: center;
+			border-top: 2px solid #887766;
+			border-bottom: 2px solid #887766;
+			color: #887766;
+			box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.05);
+
+			&._over {
+				width: 25%;
+			}
+
+			@include hoverHandler {
+				background-color: #887766;
+				color: #ffffff;
+			}
+
+			&.on {
+				background-color: #887766;
+				color: #ffffff;
+			}
+
+			@extend %hand;
+			@extend %transition;
+
+			&:nth-child(1) {
+				border-top-left-radius: 100px;
+				border-bottom-left-radius: 100px;
+				border-left: 2px solid #887766;
+			}
+
+			&:last-child {
+				border-top-right-radius: 100px;
+				border-bottom-right-radius: 100px;
+				border-right: 2px solid #887766;
+			}
+
+			&+&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				display: block;
+				width: 1px;
+				height: 36px;
+				margin: auto 0;
+				background-color: #887766;
+			}
+		}
+	}
+
+	// .recruitment_title
+	&_title {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 34px;
+		line-height: 46px;
+
+		@include mw(L) {
+			font-size: 24px;
+			line-height: 33px;
+		}
+
+		@at-root .recruitment_vacancies &,
+		.recruitment_office &,
+		.recruitment_benefits &,
+		.recruitment_connect & {
+			text-align: center;
+		}
+
+		@at-root .recruitment_connect & {
+			width: 100%;
+		}
+
+		@include mw(L) {
+			@at-root .recruitment_join & {
+				display: none;
+			}
+		}
+	}
+
+	// .recruitment_txt
+	&_txt {
+		margin-top: 40px;
+		white-space: pre-line;
+
+		.en & {
+			white-space: inherit;
+		}
+
+		@include mw(L) {
+			max-width: 574px;
+			margin-top: 26px;
+			white-space: inherit;
+			text-align: left;
+		}
+
+		@at-root .recruitment_vacancies & {
+			width: 100%;
+			max-width: 708px;
+			margin: 16px auto 0;
+			white-space: inherit;
+			text-align: center;
+
+			@include minmw(L) {
+				.en & {
+					font-size: 18px;
+					line-height: 22px;
+				}
+			}
+
+			@include mw(L) {
+				max-width: 574px;
+				text-align: left;
+			}
+		}
+	}
+
+	// .recruitment_join
+	&_join {
+		@include d_f(flex, center, center);
+		padding: 103px 107px 107px;
+
+		@include mw(L) {
+			flex-direction: column;
+			max-width: 574px;
+			margin: auto;
+			padding: 0 27px 29px;
+			text-align: center;
+
+			&::before {
+				content: attr(data-title);
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 33px;
+				text-align: center;
+			}
+
+			// .recruitment_join_info
+			&_info {
+				order: 2;
+			}
+		}
+
+		// .recruitment_join_pic
+		&_pic {
+			width: 100%;
+			max-width: 380px;
+
+			@include minmw(L) {
+				.en & {
+					min-width: 380px;
+				}
+			}
+
+			@include mw(L) {
+				order: 1;
+				max-width: 184px;
+				margin-top: 26px;
+			}
+		}
+	}
+
+	// .recruitment_vacancies
+	&_vacancies {
+		margin: 0 auto;
+		padding: 96px 107px 111px;
+		background-color: #fff;
+
+		@include mw(L) {
+			overflow: hidden;
+			padding: 34px 40px 44px;
+			text-align: center;
+		}
+
+		// .recruitment_vacancies_group
+		&_group {
+			width: 100%;
+			margin-top: 57px;
+			counter-reset: num;
+
+			@include mw(L) {
+				max-width: 574px;
+				margin: 26px auto 0;
+				text-align: left;
+			}
+
+			li {
+				padding: 28px 12px;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 26px;
+				line-height: 35px;
+
+				@include mw(L) {
+					padding: 15px 12px;
+					padding-left: calc(12px + 1.5em);
+					font-size: 18px;
+					line-height: 25px;
+					text-indent: -1.5em;
+				}
+
+				&::before {
+					counter-increment: num;
+					content: counter(num) ". ";
+					margin-right: 12px;
+
+					@include mw(L) {
+						margin-right: 8px;
+					}
+				}
+
+				&:nth-child(odd) {
+					background: #efefef;
+				}
+
+				&:nth-child(even) {
+					background: rgba(235, 222, 199, 0.8);
+				}
+			}
+		}
+	}
+
+	// .recruitment_method
+	&_method {
+		display: inline-block;
+		width: 100%;
+		margin-top: 57px;
+		text-align: left;
+
+		@include mw(L) {
+			margin-top: 44px;
+			text-align: center;
+		}
+
+		&::before {
+			content: attr(data-txt);
+			@include d_f(inline-flex, center, center);
+			width: 132px;
+			height: 48px;
+			color: #fff;
+			background-color: #887766;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 160%;
+
+			@include mw(L) {
+				width: 99px;
+				height: 29px;
+				font-size: 18px;
+			}
+		}
+	}
+
+	// .recruitment_info
+	&_info {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 160%;
+		white-space: pre-line;
+		text-align: left;
+
+		.mail {
+			position: relative;
+			@include d_f(inline-flex, center, center);
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 1;
+			@extend %hand;
+
+			@include mw(L) {
+				font-size: 16px;
+				text-align: center;
+			}
+
+			&::before {
+				content: attr(data-txt);
+				position: absolute;
+				top: calc(100% + 5px);
+				margin: auto;
+				padding: 5px 10px;
+				font-size: 14px;
+				font-weight: 400;
+				background-color: #ebdec780;
+				border-radius: 100px;
+				line-height: 1;
+				opacity: 0;
+				@extend %transition;
+			}
+
+			&::after {
+				content: attr(data-after);
+				display: block;
+				line-height: 1;
+				margin-left: 10px;
+			}
+
+			@at-root &.on::before {
+				opacity: 1;
+			}
+		}
+
+		@include mw(L) {
+			font-size: 16px;
+			text-align: center;
+		}
+	}
+
+	// .recruitment_office
+	&_office {
+		padding: 72px 105px 120px;
+		background-color: #ebdec7;
+
+		@include mw(L) {
+			padding: 34px 20px 39px;
+		}
+
+		.recruitment_office_group {
+			margin-top: 62px;
+			@include d_f(flex, center, center);
+			flex-wrap: wrap;
+
+			@include mw(L) {
+				max-width: 574px;
+				margin: 28px auto 0;
+			}
+		}
+
+		.recruitment_office_item {
+			position: relative;
+			width: calc((100% / 3 - 94px / 3));
+			margin-left: 47px;
+			margin-bottom: 47px;
+			opacity: 0;
+			transform: scale(0, 0);
+			transform-origin: center;
+
+			@include minmw(L) {
+				@include hoverHandler {
+					&::before {
+						transform: scale(1, 1);
+					}
+				}
+			}
+
+			&::before {
+				content: attr(data-office);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				top: 0;
+				@include d_f(flex, none, flex-end);
+				padding: 0 0 14px 12px;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 27px;
+				color: #ffffff;
+				transform: scale(1, 0);
+				transform-origin: center bottom;
+				@extend %transition;
+				background: linear-gradient(0deg,
+						#000000 0.2%,
+						rgba(0, 0, 0, 0) 27.86%);
+
+				@include minmw(L) {
+					.en & {
+						white-space: pre-line;
+					}
+				}
+			}
+
+			&:nth-child(3n + 1) {
+				margin-left: 0;
+			}
+
+			&.aos-animate {
+				opacity: 1;
+				transform: scale(1, 1);
+			}
+
+			@include mw(L) {
+				width: calc((100% / 3 - 16px / 3));
+				margin-left: 8px;
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	// .recruitment_benefits
+	&_benefits {
+		overflow: hidden;
+		padding: 90px 55px 134px;
+		background-color: #f9f9f9;
+
+		@include mw(L) {
+			padding: 39px 16px 38px;
+		}
+
+		// .recruitment_benefits_info
+		&_info {
+			@include d_f(flex);
+			margin-top: 78px;
+
+			@include mw(L) {
+				flex-direction: column;
+				max-width: 574px;
+				margin: 27px auto 0;
+			}
+
+			.pic {
+				width: 50%;
+
+				@include mw(L) {
+					width: 100%;
+				}
+
+				img+img {
+					margin-top: 29px;
+
+					@include mw(L) {
+						margin-top: 12px;
+					}
+				}
+			}
+
+			.detail {
+				width: 50%;
+				padding-left: 48px;
+
+				@include mw(L) {
+					width: 100%;
+					margin-top: 28px;
+					padding-left: 0;
+					text-align: center;
+				}
+
+				// .detail_title
+				&_title {
+					@include d_f(inline-flex, center, center);
+					padding: 8px 18px;
+					background-color: #887766;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 28px;
+					line-height: 38px;
+					color: #ffffff;
+
+					@include mw(L) {
+						padding: 2px 18px;
+						font-size: 18px;
+						line-height: 25px;
+					}
+
+					&:not(:first-child) {
+						margin-top: 72px;
+
+						@include mw(L) {
+							margin-top: 36px;
+						}
+					}
+				}
+
+				// .detail_group
+				&_group {
+					margin-top: 24px;
+
+					// .detail_group_item
+					&_item {
+						padding-left: 1em;
+						font-style: normal;
+						font-weight: 500;
+						font-size: 24px;
+						line-height: 160%;
+						color: #3c3c3c;
+						text-indent: -1em;
+
+						@include mw(L) {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// .recruitment_connect
+	&_connect {
+		@include d_f(flex, space-between);
+		flex-wrap: wrap;
+		width: 100%;
+		padding: 78px 74px 190px;
+		background-color: #fff;
+
+		@include mw(L) {
+			flex-direction: column;
+			padding: 45px 44px 62px;
+		}
+
+		// .recruitment_connect_info
+		&_info {
+			width: calc(50% - 32px);
+			margin-top: 75px;
+
+			@include mw(L) {
+				width: 100%;
+				max-width: 574px;
+				margin: 38px auto 0;
+			}
+
+			.map {
+				iframe {
+					width: 100%;
+					height: 380px;
+
+					@include mw(L) {
+						height: 214px;
+					}
+				}
+			}
+
+			.name {
+				margin-top: 33px;
+				margin-bottom: 18px;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 26px;
+				line-height: 35px;
+
+				@include mw(L) {
+					margin-top: 18px;
+					margin-bottom: 12px;
+					font-weight: 600;
+					font-size: 18px;
+					line-height: 25px;
+				}
+			}
+
+			.phone,
+			.address {
+				font-style: normal;
+				font-weight: 500;
+				font-size: 24px;
+				line-height: 160%;
+
+				@include mw(L) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

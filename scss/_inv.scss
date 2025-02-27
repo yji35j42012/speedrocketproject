@@ -1,0 +1,1260 @@
+.inv {
+	position: relative;
+	padding-top: 90px;
+	padding-bottom: 330px;
+	background-color: rgba(249, 249, 249, 1);
+
+	@include mw(L) {
+		padding-top: 38px;
+		padding-bottom: 50px;
+	}
+
+	// .inv_shtbbox
+	&_shtbbox {
+		overflow-x: auto;
+		width: 100%;
+	}
+
+	// .inv_normal_title
+	&_normal_title {
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 45px;
+
+		@include mw(L) {
+			font-size: 14px;
+			line-height: 22px;
+		}
+
+		.inv_normal_txt+& {
+			margin-top: 55px;
+
+			@include mw(L) {
+				margin-top: 22px;
+			}
+		}
+
+		.inv_pay .inv_normal_txt+&,
+		.inv_audit .inv_normal_txt+&,
+		.inv_sust .inv_normal_txt+&,
+		.inv_int .inv_normal_txt+&,
+		.inv_infos .inv_normal_txt+& {
+			margin-top: 80px;
+
+			@include mw(L) {
+				margin-top: 22px;
+			}
+		}
+
+
+		&+.inv_normal_txt {
+			margin-top: 14px;
+
+			@include mw(L) {
+				margin-top: 12px;
+			}
+		}
+
+		&+.inv_pay_lists {
+			margin-top: 15px;
+
+			@include mw(L) {
+				margin-top: 5px;
+			}
+		}
+
+		&+.inv_pay_txt {
+			margin-top: 14px;
+
+			@include mw(L) {
+				margin-top: 12px;
+			}
+		}
+
+	}
+
+	// .inv_normal_txt
+	&_normal_txt {
+		font-size: 26px;
+		font-weight: 400;
+		line-height: 40px;
+
+		@include mw(L) {
+			font-size: 12px;
+			line-height: 20px;
+		}
+
+		&+.inv_pay_tbbox {
+			margin-top: 26px;
+
+			@include mw(L) {
+				margin-top: 10px;
+			}
+		}
+
+		.inv_pay_tbbox+& {
+			margin-top: 28px;
+
+			@include mw(L) {
+				margin-top: 8px;
+			}
+		}
+
+		.inv_audit &._cor {
+			margin-top: 40px;
+
+			@include mw(L) {
+				margin-top: 16px;
+			}
+		}
+	}
+
+	h2 {
+		position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: calc(100% + 14px);
+			left: 0;
+			right: 0;
+			display: block;
+			width: 275px;
+			height: 1px;
+			margin: 0 auto;
+			background-color: rgba(51, 51, 51, 1);
+		}
+	}
+
+	// .inv_selbox
+	&_selbox {
+		position: sticky;
+		top: 55px;
+		padding-top: 90px;
+		background-color: #f9f9f9;
+		z-index: 1;
+
+		@include mw(XL) {
+			top: 20px;
+		}
+
+		@include mw(L) {
+			position: relative;
+			top: 0;
+			width: 100%;
+			max-width: 268px;
+			margin: 40px auto 0;
+		}
+
+		.recruitment_term {
+			position: relative;
+			top: 0;
+			margin-top: 0;
+			padding: 0;
+
+			.recruitment_term_li.on {
+				pointer-events: none;
+			}
+
+			@include mw(L) {
+				position: absolute;
+				top: calc(100% - 55px);
+				left: 0;
+				display: none;
+				width: 100%;
+				padding: 16px 20px;
+				border-radius: 16px;
+				background-color: rgba(51, 51, 51, 0.7);
+				border: 1px solid rgba(51, 51, 51, 0.2);
+
+				&.on {
+					display: block;
+				}
+
+				.recruitment_term_li {
+					width: 100%;
+					padding: 0;
+					border: none;
+					background-color: transparent;
+					color: rgba(255, 255, 255, 1);
+					text-align: left;
+
+					&.on {
+						color: rgba(153, 153, 153, 1);
+						pointer-events: none;
+					}
+
+					&::before {
+						display: none;
+					}
+				}
+
+				.recruitment_term_li+.recruitment_term_li {
+					margin-top: 15px;
+				}
+			}
+		}
+
+		// .inv_selbox_txt
+		&_txt {
+			display: none;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			max-width: 268px;
+			height: 37px;
+			padding: 0 20px;
+			background-color: rgba(51, 51, 51, 1);
+			border-radius: 100px;
+			color: rgba(255, 255, 255, 1);
+			font-size: 14px;
+			font-weight: 500;
+			@extend %hand;
+
+			&:after {
+				content: "";
+				display: block;
+				width: 16px;
+				height: 14px;
+				background: url('../images/icon/icon_triangle_bottom.svg')no-repeat center/contain;
+			}
+
+			@include mw(L) {
+				display: flex;
+			}
+		}
+	}
+
+	// .inv_report
+	// .inv_info
+	&_info,
+	&_report,
+	&_revenue {
+		display: none;
+		margin-top: 40px;
+
+		&.on {
+			display: block;
+		}
+
+		@include mw(L) {
+			margin-top: 20px;
+		}
+	}
+
+	&_info {
+		@include mw(L) {
+			overflow-x: auto;
+		}
+	}
+
+	// .inv_download
+	&_download {
+		@include d_f(flex, space-between, center);
+		width: 100%;
+		max-width: 1370px;
+		height: 95px;
+		margin: auto;
+		padding: 0 50px;
+		font-weight: 400;
+		font-size: 26px;
+		background-color: rgba(255, 255, 255, 1);
+		border: 1px solid rgba(224, 224, 224, 1);
+		border-radius: 8px;
+
+		@include mw(L) {
+			height: 56px;
+			padding: 0 12px;
+			font-size: 14px;
+		}
+
+		&+& {
+			margin-top: 35px;
+
+			@include mw(L) {
+				margin-top: 16px;
+			}
+		}
+
+		// .inv_download_icon
+		&_icon {
+			@include d_f(inline-flex, center, centfer);
+			color: rgba(136, 119, 102, 1);
+			font-weight: 700;
+			font-size: 22px;
+			@extend %hand;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 35px;
+				height: 30px;
+				margin-left: 12px;
+				background: url('../images/icon/icon_download.svg')no-repeat center/contain;
+			}
+
+			@include mw(L) {
+				display: none;
+			}
+		}
+	}
+
+	// .inv_table
+	&_table {
+		width: 100%;
+		max-width: 1550px;
+		min-width: 455px;
+		margin: auto;
+
+		// .inv_table_cap
+		&_cap {
+			height: 95px;
+			background-color: rgba(96, 96, 96, 1);
+			color: rgba(255, 255, 255, 1);
+			font-weight: 700;
+			font-size: 26px;
+			line-height: 95px;
+
+			@include mw(L) {
+				height: 48px;
+				font-size: 12px;
+				line-height: 48px;
+			}
+		}
+
+		// .inv_table_dot
+		&_dot {
+			width: 15px;
+			height: 15px;
+			margin: auto;
+			background-color: rgba(51, 51, 51, 1);
+			border-radius: 100px;
+
+			@include mw(L) {
+				width: 8px;
+				height: 8px;
+			}
+		}
+
+		// .inv_table_blod
+		&_blod td {
+			font-weight: 700 !important;
+		}
+
+		th,
+		td {
+			height: 95px;
+			border: 1px solid rgba(224, 224, 224, 1);
+			text-align: center;
+			font-size: 26px;
+			font-weight: 400;
+
+			@include mw(L) {
+				height: 40px;
+				font-size: 12px;
+			}
+		}
+
+		th {
+			background-color: rgba(216, 216, 216, 1);
+
+			&:not(:last-child) span {
+				display: block;
+				width: 100%;
+				border-right: 1px solid rgba(0, 0, 0, 1);
+			}
+
+		}
+
+		tr:nth-child(even) {
+			background-color: rgba(255, 255, 255, 1);
+		}
+
+		&._dire tr td {
+			font-weight: 500;
+		}
+
+		&._enterprise {
+			@include mw(L) {
+				min-width: 592px;
+
+				th {
+					height: 48px;
+
+					span {
+						font-weight: 700;
+					}
+				}
+			}
+
+			td {
+				font-size: 18px;
+
+				@include mw(L) {
+					height: 50px;
+					font-size: 14px;
+				}
+			}
+
+			.date {
+				width: 135px;
+			}
+		}
+
+		&._stake {
+			@include mw(L) {
+				min-width: 712px;
+
+				.first {
+					width: 145px;
+				}
+
+				.sec {
+					width: 185px;
+				}
+			}
+
+			th {
+				span {
+					font-weight: 700;
+				}
+			}
+
+			td {
+				padding: 35px 23px;
+				font-size: 18px;
+				font-weight: 400;
+				text-align: left;
+				line-height: 28px;
+				vertical-align: top;
+
+				@include mw(L) {
+					padding: 18px 20px;
+					font-size: 12px;
+					line-height: 20px;
+				}
+			}
+		}
+
+		&._dire {
+			@include mw(L) {
+				min-width: 900px;
+			}
+
+			th {
+				height: 85px;
+
+				@include mw(L) {
+					height: 48px;
+				}
+
+				span {
+					@include d_f(flex, center, center);
+					height: 50px;
+					font-weight: 700;
+					font-size: 18px;
+					line-height: 28px;
+					border-color: rgba(51, 51, 51, 0.2);
+
+					@include mw(L) {
+						font-size: 12px;
+						line-height: 20px;
+					}
+				}
+			}
+
+			td {
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 24px;
+
+				@include mw(L) {
+					font-size: 12px;
+				}
+			}
+
+			td:last-child {
+				padding-left: 23px;
+				text-align: left;
+
+				@include mw(L) {
+					padding-left: 15px;
+				}
+			}
+
+			.first {
+				width: 125px;
+			}
+
+			.sec {
+				width: 125px;
+			}
+
+			.third {
+				width: 95px;
+			}
+
+			.forth,
+			.fif,
+			.six,
+			.sev,
+			.eight,
+			.nine,
+			.ten {
+				width: 110px;
+			}
+
+			.last {
+				width: 300px;
+			}
+		}
+
+		&._pay {
+			@include mw(L) {
+				min-width: 738px;
+			}
+
+			th {
+				span {
+					font-weight: 700;
+
+				}
+
+				@include mw(L) {
+					font-size: 12px;
+					line-height: 20px;
+				}
+			}
+
+			td {
+				padding: 35px 0;
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 28px;
+				vertical-align: top;
+
+				&:first-child {
+					vertical-align: middle;
+				}
+
+				@include mw(L) {
+					font-size: 12px;
+					line-height: 20px;
+				}
+			}
+
+			.first {
+				min-width: 138px;
+
+				@include mw(L) {
+					min-width: 90px;
+				}
+			}
+
+			.sec {
+				min-width: 330px;
+
+				@include mw(L) {
+					min-width: 190px;
+				}
+			}
+
+			.for {
+				min-width: 220px;
+			}
+		}
+
+		&._t10 {
+			@include mw(L) {
+				min-width: 455px;
+			}
+
+			th {
+				span {
+					font-weight: 700;
+					font-size: 26px;
+					line-height: 40px;
+
+					@include mw(L) {
+						font-size: 12px;
+						line-height: 20px;
+					}
+				}
+
+				&:first-child {
+					padding-left: 70px;
+					text-align: left;
+
+					@include mw(L) {
+						padding-left: 16px;
+					}
+				}
+			}
+
+			td:first-child {
+				padding-left: 70px;
+				text-align: left;
+
+				@include mw(L) {
+					padding-left: 16px;
+				}
+			}
+
+
+			// th:nth-child(2) span,
+			// td:nth-child(2) {
+			// 	padding-right: 70px;
+			// 	padding-left: 70px;
+			// }
+
+		}
+	}
+
+	// .inv_revenue
+	&_revenue {
+
+		// .inv_revenue_title
+		&_title {
+			margin-bottom: 10px;
+			font-weight: 700;
+			font-size: 20px;
+			color: rgba(136, 119, 102, 1);
+
+			@include mw(L) {
+				font-size: 12px;
+			}
+
+			.inv_download+& {
+				margin-top: 50px;
+
+				@include mw(L) {
+					margin-top: 26px;
+				}
+			}
+		}
+	}
+
+	// .inv_allrep
+	&_allrep {
+		display: none;
+		flex-wrap: wrap;
+		margin-top: 130px;
+
+		@include mw(L) {
+			max-width: 340px;
+			margin: 46px auto 0;
+		}
+
+		&.on {
+			@include d_f(flex);
+		}
+
+		// .inv_allrep_item
+		&_item {
+			@include d_f(flex, none, center);
+			flex-direction: column;
+			width: calc(100% / 3 - 64px / 3);
+			max-width: 488px;
+			padding: 58px 21px 16px 0;
+			background-color: rgba(255, 255, 255, 1);
+			border: 1px solid rgba(224, 224, 224, 1);
+			border-radius: 8px;
+
+			@include minmw(L) {
+				margin-left: 32px;
+				margin-bottom: 46px;
+
+				&:nth-child(3n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			@include mw(L) {
+				width: calc(50% - 6px);
+				max-width: 164px;
+				margin-bottom: 22px;
+				padding: 12px 0;
+
+				&:nth-child(even) {
+					margin-left: 12px;
+				}
+			}
+
+
+
+			.number {
+				@include d_f(inline-flex, center, center);
+				width: 144px;
+				height: 38px;
+				border: 1px solid rgba(51, 51, 51, 1);
+				font-weight: 400;
+				font-size: 16px;
+
+				&::before {
+					content: attr(data-txt);
+				}
+
+				@include mw(L) {
+					width: 100px;
+					height: 24px;
+					font-size: 12px;
+				}
+			}
+
+			.yreport {
+				@include d_f(flex, center, flex-end);
+				margin-top: 30px;
+				font-weight: 700;
+				font-size: 64px;
+
+				&:after {
+					content: attr(data-txt);
+					margin-left: 8px;
+					font-size: 26px;
+					font-weight: 400;
+				}
+
+				@include mw(L) {
+					margin-top: 10px;
+					font-size: 24px;
+
+					&:after {
+						font-size: 12px;
+					}
+				}
+			}
+
+			.inv_download_icon {
+				margin-top: 77px;
+				margin-left: auto;
+
+				@include mw(L) {
+					@include d_f(inline-flex, none, center);
+					margin-top: 8px;
+					font-size: 12px;
+					margin-right: auto;
+
+					&:after {
+						width: 18px;
+						height: 16px;
+						margin-left: 4px;
+					}
+				}
+			}
+		}
+	}
+
+	// .inv_file
+	&_file {
+		display: none;
+
+		&.on {
+			display: block;
+		}
+
+
+		// .inv_file_title
+		&_title {
+			margin-bottom: 24px;
+			font-size: 28px;
+			font-weight: 600;
+			color: rgba(136, 119, 102, 1);
+
+			.inv_shtbbox+&,
+			.normal_btn+& {
+				margin-top: 90px;
+
+				@include mw(L) {
+					margin-top: 35px;
+				}
+			}
+
+			@include mw(L) {
+				margin-bottom: 8px;
+				font-size: 13px;
+			}
+		}
+
+		// .inv_file_tb
+		&_tb {
+
+			th,
+			td {
+				height: 70px;
+				font-size: 26px;
+				font-weight: 400;
+				text-align: left;
+
+				@include mw(L) {
+					height: 34px;
+					font-size: 12px;
+				}
+			}
+
+			th {
+				min-width: 384px;
+				padding-left: 55px;
+				background-color: rgba(217, 217, 217, 1);
+				border: 1px solid rgba(255, 255, 255, 1);
+
+				&:first-child {
+					border-top-color: rgba(217, 217, 217, 1);
+				}
+
+				&:last-child {
+					border-bottom-color: rgba(217, 217, 217, 1);
+				}
+
+				@include mw(L) {
+					min-width: 80px;
+					padding-top: 7px;
+					padding-left: 6px;
+					padding-right: 14px;
+					line-height: 20px;
+					vertical-align: top;
+				}
+			}
+
+			td {
+				width: 100%;
+				padding: 15px 55px;
+				background-color: rgba(255, 255, 255, 1);
+				border: 1px solid rgba(217, 217, 217, 1);
+
+				@include mw(L) {
+					padding: 6px 8px;
+				}
+
+				span {
+					display: block;
+					padding: 40px 0;
+					line-height: 41.6px;
+					font-size: 26px;
+
+					@include mw(L) {
+						padding: 0;
+						font-size: 12px;
+						line-height: 20px;
+					}
+				}
+			}
+
+			&+.inv_file_title {
+				margin-top: 90px;
+
+				@include mw(L) {
+					margin-top: 34px;
+				}
+			}
+		}
+
+		// .inv_file_dw
+		&_dw {
+			a {
+				@include d_f(flex, none, center);
+				color: rgba(51, 51, 51, 1);
+				font-size: 26px;
+				font-weight: 400;
+
+				&::before {
+					content: "";
+					flex: none;
+					display: block;
+					width: 46px;
+					height: 46px;
+					margin-right: 16px;
+					background: url('../images/icon/icon_download_tb.svg')no-repeat center/contain;
+				}
+
+				@include mw(L) {
+					margin-right: 10px;
+					font-size: 12px;
+
+					&::before {
+						width: 26px;
+						height: 26px;
+					}
+				}
+			}
+
+			a+a {
+				margin-top: 24px;
+
+				@include mw(L) {
+					margin-top: 12px;
+				}
+			}
+		}
+	}
+
+	// .inv_mana
+	&_mana {
+
+		// .inv_mana_ul
+		&_ul {
+			max-width: 1577px;
+			padding-left: 40px;
+
+			@include mw(L) {
+				padding-left: 20px;
+			}
+		}
+
+		// .inv_mana_item
+		&_item {
+			font-size: 26px;
+			font-weight: 400;
+			line-height: 40px;
+			list-style-type: disc;
+
+			@include mw(L) {
+				font-size: 12px;
+				line-height: 20px;
+			}
+		}
+
+		// .inv_mana_tbbox
+		&_tbbox {
+			margin-top: 35px;
+
+			@include mw(L) {
+				overflow-x: auto;
+				margin-top: 8px;
+			}
+		}
+
+		// .inv_mana_title
+		&_title {
+			margin-top: 80px;
+			margin-bottom: 14px;
+			font-weight: 700;
+			font-size: 28px;
+
+			@include mw(L) {
+				margin-top: 22px;
+				font-size: 14px;
+			}
+		}
+	}
+
+	// .inv_labor
+	&_labor {
+
+		// .inv_labor_title
+		&_title {
+			font-size: 28px;
+			font-weight: 700;
+			line-height: 45px;
+
+			@include mw(L) {
+				font-size: 12px;
+				line-height: 20px;
+			}
+		}
+
+		// .inv_labor_txt
+		&_txt {
+			margin-top: 14px;
+			font-size: 26px;
+			font-weight: 400;
+			line-height: 40px;
+
+			&+.inv_labor_title {
+				margin-top: 80px;
+
+				@include mw(L) {
+					margin-top: 20px;
+				}
+			}
+
+			@include mw(L) {
+				margin-top: 12px;
+				font-size: 12px;
+				line-height: 20px;
+			}
+		}
+	}
+
+	// .inv_stake
+	&_stake {
+
+		// .inv_stake_tbbox
+		&_tbbox {
+			margin-top: 35px;
+
+			@include mw(L) {
+				overflow-x: auto;
+				margin-top: 22px;
+			}
+		}
+	}
+
+	// .inv_dire
+	&_dire {
+
+		// .inv_dire_tbbox
+		&_tbbox {
+			.inv_normal_txt+& {
+				margin-top: 24px;
+
+				@include mw(L) {
+					overflow-x: auto;
+					margin-top: 8px;
+				}
+			}
+		}
+
+		// .inv_dire_result
+		&_result {
+			color: rgba(136, 119, 102, 1);
+			font-size: 28px;
+			font-weight: 600;
+			line-height: 38px;
+			text-align: center;
+
+			@include mw(L) {
+				font-size: 13px;
+				line-height: 18px;
+			}
+
+			.inv_dire_tbbox+& {
+				margin-top: 110px;
+
+				@include mw(L) {
+					margin-top: 35px;
+				}
+			}
+
+			&+.inv_download {
+				margin-top: 50px;
+
+				@include mw(L) {
+					margin-top: 22px;
+				}
+			}
+		}
+	}
+
+	// .inv_pay
+	&_pay {
+
+		// .inv_pay_lists
+		&_lists {
+			&+.inv_normal_title {
+				margin-top: 80px;
+
+				@include mw(L) {
+					margin-top: 22px;
+				}
+			}
+
+			li {
+				@include d_f(flex, none, center);
+				height: 70px;
+				border-bottom: 1px solid rgba(217, 217, 217, 1);
+				font-size: 26px;
+				font-weight: 400;
+				line-height: 40px;
+
+				@include mw(L) {
+					height: 40px;
+					font-size: 12px;
+					line-height: 20px;
+				}
+
+				&::before {
+					content: attr(data-txt);
+					display: inline-block;
+					text-align-last: justify;
+					width: 80px;
+
+					@include mw(L) {
+						width: 40px;
+					}
+				}
+			}
+
+			&+.inv_pay_tbbox {
+				margin-top: 34px;
+
+				@include mw(L) {
+					margin-top: 8px;
+				}
+			}
+		}
+
+		// .inv_pay_ul
+		&_ul {
+			padding-left: 35px;
+			padding-right: 20px;
+			text-align: left;
+
+			@include mw(L) {
+				padding-left: 25px;
+				padding-right: 10px;
+			}
+
+			li {
+				list-style-type: disc;
+				line-height: 40px;
+
+				@include mw(L) {
+					line-height: 20px;
+				}
+
+				&.nost {
+					margin-left: -35px;
+					list-style: none;
+
+					@include mw(L) {
+						margin-left: -25px;
+					}
+				}
+			}
+
+			&._num {
+				padding-left: 35px;
+
+				li {
+					list-style-type: decimal;
+				}
+			}
+
+			.inv_pay_txt & {
+				li {
+					font-size: 26px;
+					font-weight: 400;
+					line-height: 40px;
+
+					@include mw(L) {
+						font-size: 12px;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+
+		// .inv_pay_tbbox
+		&_tbbox {
+			overflow-x: auto;
+
+			&+.inv_pay_txt {
+				margin-top: 28px;
+			}
+		}
+	}
+
+	// .inv_audit
+	&_audit {
+		.firsttb {
+			min-width: 270px;
+
+			@include mw(L) {
+				min-width: 186px;
+			}
+		}
+
+		.sectb {
+			width: 100%;
+		}
+
+		.thtb {
+			min-width: 350px;
+
+			@include mw(L) {
+				min-width: 200px;
+			}
+		}
+
+		.inv_table._pay td:first-child {
+			padding-left: 65px;
+			vertical-align: top;
+			text-align: left;
+
+			@include mw(L) {
+				padding-left: 35px;
+			}
+		}
+
+		.inv_table._pay td.codate {
+			padding-left: 26px;
+
+			@include mw(L) {
+				padding-left: 20px;
+			}
+		}
+	}
+
+	// .inv_sust
+	&_sust {
+		.inv_table._pay .codate {
+			padding-left: 26px;
+			padding-right: 26px;
+			text-align: left;
+			vertical-align: top;
+
+			@include mw(L) {
+				padding-top: 18px;
+				padding-bottom: 18px;
+			}
+		}
+
+		.inv_table._pay td {
+			@include mw(L) {
+				padding-top: 18px;
+				padding-bottom: 18px;
+			}
+		}
+
+		.firsttb {
+			min-width: 270px;
+
+			@include mw(L) {
+				min-width: 180px;
+			}
+		}
+
+		.thtb {
+			min-width: 250px;
+
+			@include mw(L) {
+				min-width: 180px;
+			}
+		}
+	}
+
+	// .inv_t10
+	&_t10 {
+
+		// .inv_t10_tbbox
+		&_tbbox {
+			@include mw(L) {
+				overflow-x: auto;
+			}
+		}
+	}
+
+	// .inv_switch
+	// .inv_dividend
+	// .inv_ann
+	// .inv_agency
+
+	&_switch,
+	&_dividend,
+	&_ann,
+	&_agency {
+		display: none;
+	}
+
+	&_switch {
+		margin-top: 70px;
+
+		@include mw(L) {
+			margin-top: 45px;
+		}
+
+		&.on {
+			display: block;
+		}
+	}
+}

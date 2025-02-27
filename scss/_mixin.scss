@@ -1,0 +1,101 @@
+%transition {
+	transition-duration: 0.3s;
+}
+
+%hand {
+	cursor: pointer;
+}
+
+@mixin hoverHandler {
+
+	@media (pointer: fine) and (max-resolution: 2dppx),
+	screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2),
+	(-moz-touch-enabled: 0) {
+		&:hover {
+			@content;
+		}
+	}
+
+	&:active {
+		@content;
+	}
+}
+
+// juc 預設值 flex-start 、 align-items 預設值 stretch
+@mixin d_f($flex, $jc: flex-start, $ai: stretch) {
+	display: $flex;
+
+	@if ($jc !=0) {
+		justify-content: $jc;
+	}
+
+	@if ($ai !=0) {
+		align-items: $ai;
+	}
+}
+
+// 定位
+@mixin pos_a($top, $right, $bottom, $left) {
+	position: absolute;
+
+	@if $top !="n" {
+		top: $top;
+	}
+
+	@if $bottom !="n" {
+		bottom: $bottom;
+	}
+
+	@if $right !="n" {
+		right: $right;
+	}
+
+	@if $left !="n" {
+		left: $left;
+	}
+}
+
+// RWD相關
+$breakpoints: (
+	hitem: 1800px,
+	XXL: 1440px,
+	XL: 1280px,
+	L: 1024px,
+	M: 995px,
+	S: 767px,
+	XS: 599px,
+	XXS: 360px
+);
+$minbreakpoints: (
+	XXL: 1441px,
+	XL: 1281px,
+	L: 1025px,
+	M: 996px,
+	S: 768px,
+	XS: 600px,
+	XXS: 361px
+);
+
+@mixin mw($size) {
+	@media screen and (max-width: map-get($breakpoints, $size)) {
+		@content;
+	}
+}
+
+@mixin minmw($size) {
+	@media screen and (min-width: map-get($minbreakpoints, $size )) {
+		@content;
+	}
+}
+
+@mixin mwrange($min, $max) {
+	@media screen and (min-width: map-get($breakpoints, $min)) and (max-width: map-get($breakpoints, $max)) {
+		@content;
+	}
+}
+
+@mixin overflow($x, $y) {
+	overflow-x: $x;
+	overflow-y: $y;
+	-webkit-overflow-scrolling: auto;
+}
