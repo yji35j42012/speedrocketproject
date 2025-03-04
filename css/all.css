@@ -7625,11 +7625,15 @@ h4 .style_X::before, h4 .style_X::after {
 }
 @media screen and (max-width: 1024px) {
   .inv_selbox {
-    position: relative;
-    top: 0;
+    position: sticky;
+    top: 53px;
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    max-width: 268px;
     margin: 40px auto 0;
+    padding-top: 10px;
   }
 }
 .inv_selbox .recruitment_term {
@@ -7646,8 +7650,11 @@ h4 .style_X::before, h4 .style_X::after {
     position: absolute;
     top: calc(100% - 55px);
     left: 0;
+    right: 0;
     display: none;
     width: 100%;
+    max-width: 268px;
+    margin: 0 auto;
     padding: 16px 20px;
     border-radius: 16px;
     background-color: rgba(51, 51, 51, 0.7);

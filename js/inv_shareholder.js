@@ -117,8 +117,10 @@ var inv_sel=document.querySelector("#inv_term")
 var inv_term_item=document.querySelectorAll("#inv_term li");
 var nameArr=[];
 var areaArr=[];
+var rangeArr=[0, 525, 750, 1100];
+var termCount=0;
 var defaultGo=112;
-// var scrollState="down";
+var scrollState="down";
 // 112
 for (let i=0; i<inv_term_item.length; i++) {
 	const element=inv_term_item[i];
@@ -126,8 +128,6 @@ for (let i=0; i<inv_term_item.length; i++) {
 	nameArr.push(element.getAttribute("name"));
 	var s=document.querySelector("#"+element.getAttribute("name"));
 	areaArr.push(s.offsetTop);
-	console.log('nameArr', nameArr);
-	console.log('areaArr', areaArr);
 
 	element.onclick=function () {
 		inv_sel.classList.remove('on');
@@ -141,19 +141,47 @@ for (let i=0; i<inv_term_item.length; i++) {
 			goTop(nowScroll, goScroll)
 			scrollState="top";
 		}
-
 		// window.scrollTo(0, areaArr[i]-defaultGo);
 	}
+
 }
 function scrollListener() {
 	var nowScroll=window.scrollY;
 	console.log('nowScroll', nowScroll);
+	if (nowScroll>rangeArr[3]) {
+		inv_term_item[0].classList.remove('on')
+		inv_term_item[1].classList.remove('on')
+		inv_term_item[2].classList.remove('on')
+		inv_term_item[3].classList.add('on')
+		inv_selbox_txt.innerHTML=inv_term_item[3].innerHTML;
+	} else if (nowScroll>rangeArr[2]) {
+		inv_term_item[0].classList.remove('on')
+		inv_term_item[1].classList.remove('on')
+		inv_term_item[2].classList.add('on')
+		inv_term_item[3].classList.remove('on')
+		inv_selbox_txt.innerHTML=inv_term_item[2].innerHTML;
+	} else if (nowScroll>rangeArr[1]) {
+		inv_term_item[0].classList.remove('on')
+		inv_term_item[1].classList.add('on')
+		inv_term_item[2].classList.remove('on')
+		inv_term_item[3].classList.remove('on')
+		inv_selbox_txt.innerHTML=inv_term_item[1].innerHTML;
+	} else if (nowScroll>rangeArr[0]) {
+		inv_term_item[0].classList.add('on')
+		inv_term_item[1].classList.remove('on')
+		inv_term_item[2].classList.remove('on')
+		inv_term_item[3].classList.remove('on')
+		inv_selbox_txt.innerHTML=inv_term_item[0].innerHTML;
+	}
 }
 
 function goTop(from, to) {
+	console.log('from', from);
+	console.log('to', to);
+	console.log('w', window.scrollY);
 	scrollState="up";
 	let scrollTime=setInterval(() => {
-		if (from<=to) {
+		if (from<=to-50) {
 			from=to;
 			clearInterval(scrollTime);
 		} else {
@@ -163,6 +191,9 @@ function goTop(from, to) {
 	}, 0);
 }
 function goDown(from, to) {
+	console.log('from', from);
+	console.log('to', to);
+	scrollState="down";
 	let scrollTime=setInterval(() => {
 		if (from>=to) {
 			from=to;
@@ -185,21 +216,13 @@ window.onresize=function () {
 		areaArr.push(s.offsetTop);
 	}
 	if (window.innerWidth>1024) {
-		defaultGo=112
+		defaultGo=230
 	} else {
-		defaultGo=72
+		defaultGo=100
+		areaArr[2]=570;
+		areaArr[3]=690;
 	}
 }
-
-
-
-
-
-
-
-
-
-
 
 
 var yearList=document.querySelector("#yearList");
@@ -209,10 +232,23 @@ var yearList_li_count=0;
 (function () {
 	yearList_li[yearList_li_count].classList.add("on");
 	if (window.innerWidth>1024) {
-		defaultGo=112
+		defaultGo=230
+		rangeArr=[0, 525, 750, 1100]
 	} else {
-		defaultGo=72
+		defaultGo=100
+		rangeArr=[0, 180, 365, 500]
+		areaArr[2]=570;
+		areaArr[3]=690;
 	}
+
+	for (let i=0; i<areaArr.length; i++) {
+		const element=areaArr[i];
+		if (window.scrollY<element) {
+			inv_term_item[i].classList.add('on')
+			return
+		}
+	}
+
 })();
 
 function isYearList(s) {

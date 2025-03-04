@@ -139,11 +139,14 @@
 		}
 
 		@include mw(L) {
-			position: relative;
-			top: 0;
+			position: sticky;
+			top: 53px;
+			@include d_f(flex, none, center);
+			flex-direction: column;
 			width: 100%;
-			max-width: 268px;
+			// max-width: 268px;
 			margin: 40px auto 0;
+			padding-top: 10px;
 		}
 
 		.recruitment_term {
@@ -160,8 +163,11 @@
 				position: absolute;
 				top: calc(100% - 55px);
 				left: 0;
+				right: 0;
 				display: none;
 				width: 100%;
+				max-width: 268px;
+				margin: 0 auto;
 				padding: 16px 20px;
 				border-radius: 16px;
 				background-color: rgba(51, 51, 51, 0.7);
