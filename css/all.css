@@ -7816,6 +7816,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table th,
 .inv_table td {
   height: 95px;
+  padding: 5px 0;
   border: 1px solid rgb(224, 224, 224);
   text-align: center;
   font-size: 26px;
@@ -7896,7 +7897,7 @@ h4 .style_X::before, h4 .style_X::after {
 }
 @media screen and (max-width: 1024px) {
   .inv_table._dire {
-    min-width: 900px;
+    min-width: 1000px;
   }
 }
 .inv_table._dire th {
@@ -7943,18 +7944,20 @@ h4 .style_X::before, h4 .style_X::after {
   }
 }
 .inv_table._dire .first {
-  width: 125px;
+  width: 85px;
 }
 .inv_table._dire .sec {
-  width: 125px;
+  width: 167px;
 }
 .inv_table._dire .third {
   width: 95px;
 }
 .inv_table._dire .forth,
 .inv_table._dire .fif,
+.inv_table._dire .sev {
+  width: 110px;
+}
 .inv_table._dire .six,
-.inv_table._dire .sev,
 .inv_table._dire .eight,
 .inv_table._dire .nine,
 .inv_table._dire .ten {
@@ -8011,6 +8014,14 @@ h4 .style_X::before, h4 .style_X::after {
 }
 .inv_table._pay .for {
   min-width: 220px;
+}
+.inv_table._pay .forth_2 {
+  min-width: 410px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._pay .forth_2 {
+    min-width: 210px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .inv_table._t10 {
@@ -8541,15 +8552,19 @@ h4 .style_X::before, h4 .style_X::after {
     min-width: 200px;
   }
 }
-.inv_audit .inv_table._pay td:first-child {
+.inv_audit .inv_table._pay:not(._ot) td:first-child {
   padding-left: 65px;
   vertical-align: top;
   text-align: left;
 }
 @media screen and (max-width: 1024px) {
-  .inv_audit .inv_table._pay td:first-child {
+  .inv_audit .inv_table._pay:not(._ot) td:first-child {
     padding-left: 35px;
   }
+}
+.inv_audit .inv_table._pay._ot td {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .inv_audit .inv_table._pay td.codate {
   padding-left: 26px;
@@ -8567,8 +8582,7 @@ h4 .style_X::before, h4 .style_X::after {
 }
 @media screen and (max-width: 1024px) {
   .inv_sust .inv_table._pay .codate {
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding: 18px;
   }
 }
 @media screen and (max-width: 1024px) {
