@@ -7645,6 +7645,9 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_selbox .recruitment_term .recruitment_term_li.on {
   pointer-events: none;
 }
+.inv_selbox .recruitment_term .recruitment_term_li.on + .recruitment_term_li::before {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .inv_selbox .recruitment_term {
     position: absolute;
