@@ -7816,6 +7816,23 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table_blod td {
   font-weight: 700 !important;
 }
+.inv_table._rev th {
+  width: 33.3333333333%;
+}
+.inv_table_link {
+  position: relative;
+  color: #3C5BA8;
+  padding-bottom: 3px;
+}
+.inv_table_link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #3C5BA8;
+}
 .inv_table th,
 .inv_table td {
   height: 95px;
@@ -8615,7 +8632,7 @@ h4 .style_X::before, h4 .style_X::after {
     overflow-x: auto;
   }
 }
-.inv_switch, .inv_dividend, .inv_ann, .inv_agency {
+.inv_switch, .inv_dividend, .inv_ann, .inv_agency, .inv_oper {
   display: none;
 }
 .inv_switch {

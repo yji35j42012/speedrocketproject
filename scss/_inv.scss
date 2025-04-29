@@ -159,6 +159,10 @@
 				pointer-events: none;
 			}
 
+			.recruitment_term_li.on+.recruitment_term_li::before {
+				display: none;
+			}
+
 			@include mw(L) {
 				position: absolute;
 				top: calc(100% - 55px);
@@ -347,9 +351,31 @@
 			font-weight: 700 !important;
 		}
 
+		&._rev th {
+			width: calc(100% / 3);
+		}
+
+		// .inv_table_link
+		&_link {
+			position: relative;
+			color: #3C5BA8;
+			padding-bottom: 3px;
+
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: #3C5BA8;
+			}
+		}
+
 		th,
 		td {
 			height: 95px;
+			padding: 5px 0;
 			border: 1px solid rgba(224, 224, 224, 1);
 			text-align: center;
 			font-size: 26px;
@@ -444,7 +470,7 @@
 
 		&._dire {
 			@include mw(L) {
-				min-width: 900px;
+				min-width: 1000px;
 			}
 
 			th {
@@ -489,11 +515,11 @@
 			}
 
 			.first {
-				width: 125px;
+				width: 85px;
 			}
 
 			.sec {
-				width: 125px;
+				width: 167px;
 			}
 
 			.third {
@@ -502,8 +528,11 @@
 
 			.forth,
 			.fif,
+			.sev {
+				width: 110px;
+			}
+
 			.six,
-			.sev,
 			.eight,
 			.nine,
 			.ten {
@@ -567,6 +596,16 @@
 
 			.for {
 				min-width: 220px;
+			}
+
+			.fir_2 {}
+
+			.forth_2 {
+				min-width: 410px;
+
+				@include mw(L) {
+					min-width: 210px;
+				}
 			}
 		}
 
@@ -1172,7 +1211,7 @@
 			}
 		}
 
-		.inv_table._pay td:first-child {
+		.inv_table._pay:not(._ot) td:first-child {
 			padding-left: 65px;
 			vertical-align: top;
 			text-align: left;
@@ -1180,6 +1219,11 @@
 			@include mw(L) {
 				padding-left: 35px;
 			}
+		}
+
+		.inv_table._pay._ot td {
+			padding-left: 5px;
+			padding-right: 5px;
 		}
 
 		.inv_table._pay td.codate {
@@ -1200,8 +1244,7 @@
 			vertical-align: top;
 
 			@include mw(L) {
-				padding-top: 18px;
-				padding-bottom: 18px;
+				padding: 18px;
 			}
 		}
 
@@ -1244,11 +1287,13 @@
 	// .inv_dividend
 	// .inv_ann
 	// .inv_agency
+	// .inv_oper
 
 	&_switch,
 	&_dividend,
 	&_ann,
-	&_agency {
+	&_agency,
+	&_oper {
 		display: none;
 	}
 
