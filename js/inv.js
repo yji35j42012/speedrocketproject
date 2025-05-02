@@ -17,6 +17,10 @@ for (let i=0; i<inv_sel_li.length; i++) {
 		inv_selbox_txt.innerHTML=inv_sel_li[i].innerHTML;
 		document.querySelector("#"+inv_sel_li[inv_sel_count].getAttribute('name')).classList.remove('on');
 		document.querySelector("#"+inv_sel_li[i].getAttribute('name')).classList.add('on');
+		document.querySelector("#more_revenue").classList.remove('on');
+		if(inv_sel_li[i].getAttribute('name')=="inv_revenue"){
+			document.querySelector("#more_revenue").classList.add('on');
+		}
 		isYearList(inv_sel_li[i].getAttribute('name'))
 		inv_sel_count=i;
 		scroll_body.scrollTo(0,0)
