@@ -23,7 +23,16 @@ for (let i = 0; i < inv_sel_li.length; i++) {
 				document.querySelector("#more_revenue").classList.add('on');
 			}
 		}
-
+		if (inv_sel_li[i].getAttribute('name') == "inv_info") {
+			let yl = document.querySelectorAll(".yearList_item");
+			yearList_li[2].style = `display:none`;
+			yearList_li[3].style = `display:none`;
+			yearList_li[4].style = `display:none`;
+		} else {
+			yearList_li[2].style = `display:`;
+			yearList_li[3].style = `display:`;
+			yearList_li[4].style = `display:`;
+		}
 
 		isYearList(inv_sel_li[i].getAttribute('name'))
 		inv_sel_count = i;
@@ -58,8 +67,6 @@ inv_selbox_txt.onclick = function () {
 }
 
 function isYearList(s) {
-	console.log('ha', yearList);
-
 	if (s == 'inv_allrep') {
 		yearList.classList.remove("on");
 	} else {

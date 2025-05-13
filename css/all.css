@@ -1302,6 +1302,7 @@ footer .container {
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding-bottom: 100px;
   color: rgb(0, 0, 0);
 }
 .headAni .nav {
@@ -3083,6 +3084,16 @@ h4 .style_X::before, h4 .style_X::after {
 @media screen and (max-width: 1024px) {
   .yearList {
     margin-top: 26px;
+  }
+}
+.yearList._inside {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .yearList._inside {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 .yearList_item {
@@ -7623,6 +7634,14 @@ h4 .style_X::before, h4 .style_X::after {
   padding-top: 90px;
   background-color: #f9f9f9;
   z-index: 1;
+}
+.inv_selbox + .inv_file_title {
+  margin-top: 70px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_selbox + .inv_file_title {
+    margin-top: 26px;
+  }
 }
 @media screen and (max-width: 1280px) {
   .inv_selbox {
