@@ -1302,7 +1302,6 @@ footer .container {
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding-bottom: 100px;
   color: rgb(0, 0, 0);
 }
 .headAni .nav {
@@ -1329,6 +1328,7 @@ footer .container {
     color: #000 !important;
     transform: translateX(100%);
     transition-duration: 0.3s;
+    padding-bottom: 100px;
   }
   .nav.on {
     transform: translateX(0%);
