@@ -1247,6 +1247,11 @@ footer .container {
     width: 190px;
   }
 }
+@media screen and (max-width: 360px) {
+  .footer_logo {
+    width: 150px;
+  }
+}
 .footer_info {
   display: flex;
   justify-content: none;
