@@ -1154,7 +1154,7 @@ footer .container {
 .footer_nav_group + .footer_nav_group {
   margin-left: 94px;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1440px) {
   .footer_nav_group + .footer_nav_group {
     margin-left: 80px;
   }
@@ -1195,7 +1195,7 @@ footer .container {
 .footer_community {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -1240,6 +1240,11 @@ footer .container {
 @media screen and (max-width: 1280px) {
   .footer_logo {
     width: 241px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .footer_logo {
+    width: 190px;
   }
 }
 .footer_info {

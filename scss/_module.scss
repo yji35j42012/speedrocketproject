@@ -1110,7 +1110,7 @@ h4 {
 			&+& {
 				margin-left: 94px;
 
-				@include mw(XL) {
+				@include mw(XXL) {
 					margin-left: 80px;
 				}
 
@@ -1160,7 +1160,7 @@ h4 {
 	&_community {
 		position: absolute;
 		top: 0;
-		right: 20px;
+		right: 5px;
 		@include d_f(flex);
 
 		.icon {
@@ -1207,6 +1207,10 @@ h4 {
 
 		@include mw(XL) {
 			width: 241px;
+		}
+
+		@include mw(XS) {
+			width: 190px;
 		}
 	}
 
@@ -1294,6 +1298,7 @@ h4 {
 		color: #000 !important;
 		transform: translateX(100%);
 		transition-duration: 0.3s;
+		padding-bottom: 100px;
 
 		&.on {
 			transform: translateX(0%);
@@ -3137,6 +3142,16 @@ h4 {
 		margin-top: 26px;
 	}
 
+	&._inside {
+		margin-top: 24px;
+		margin-bottom: 24px;
+
+		@include mw(L) {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
 	// .yearList_item
 	&_item {
 		position: relative;
@@ -3176,5 +3191,9 @@ h4 {
 				background: url('../images/icon/icon_triangle_year.svg')no-repeat center/contain;
 			}
 		}
+	}
+
+	&+.inv_download {
+		margin-top: 40px;
 	}
 }
