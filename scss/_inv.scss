@@ -4,7 +4,7 @@
 	padding-bottom: 330px;
 	background-color: rgba(249, 249, 249, 1);
 
-	@include mw(L) {
+	@include mw(XL) {
 		padding-top: 38px;
 		padding-bottom: 50px;
 	}
@@ -21,7 +21,7 @@
 		font-weight: 700;
 		line-height: 45px;
 
-		@include mw(L) {
+		@include mw(XL) {
 			font-size: 14px;
 			line-height: 22px;
 		}
@@ -29,7 +29,7 @@
 		.inv_normal_txt+& {
 			margin-top: 55px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 22px;
 			}
 		}
@@ -41,7 +41,7 @@
 		.inv_infos .inv_normal_txt+& {
 			margin-top: 80px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 22px;
 			}
 		}
@@ -50,7 +50,7 @@
 		&+.inv_normal_txt {
 			margin-top: 14px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 12px;
 			}
 		}
@@ -58,7 +58,7 @@
 		&+.inv_pay_lists {
 			margin-top: 15px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 5px;
 			}
 		}
@@ -66,11 +66,10 @@
 		&+.inv_pay_txt {
 			margin-top: 14px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 12px;
 			}
 		}
-
 	}
 
 	// .inv_normal_txt
@@ -83,7 +82,7 @@
 			margin-top: 20px;
 		}
 
-		@include mw(L) {
+		@include mw(XL) {
 			font-size: 12px;
 			line-height: 20px;
 		}
@@ -91,7 +90,7 @@
 		&+.inv_pay_tbbox {
 			margin-top: 26px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 10px;
 			}
 		}
@@ -99,7 +98,7 @@
 		.inv_pay_tbbox+& {
 			margin-top: 28px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 8px;
 			}
 		}
@@ -107,7 +106,7 @@
 		.inv_audit &._cor {
 			margin-top: 40px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 16px;
 			}
 		}
@@ -141,7 +140,7 @@
 		&+.inv_file_title {
 			margin-top: 70px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 26px;
 			}
 		}
@@ -150,7 +149,7 @@
 			top: 20px;
 		}
 
-		@include mw(L) {
+		@include mw(XL) {
 			position: sticky;
 			top: 53px;
 			@include d_f(flex, none, center);
@@ -175,7 +174,7 @@
 				display: none;
 			}
 
-			@include mw(L) {
+			@include mw(XL) {
 				position: absolute;
 				top: calc(100% - 55px);
 				left: 0;
@@ -241,7 +240,7 @@
 				background: url('../images/icon/icon_triangle_bottom.svg')no-repeat center/contain;
 			}
 
-			@include mw(L) {
+			@include mw(XL) {
 				display: flex;
 			}
 		}
@@ -259,13 +258,13 @@
 			display: block;
 		}
 
-		@include mw(L) {
+		@include mw(XL) {
 			margin-top: 20px;
 		}
 	}
 
 	&_info {
-		@include mw(L) {
+		@include mw(XL) {
 			overflow-x: auto;
 		}
 	}
@@ -284,7 +283,7 @@
 		border: 1px solid rgba(224, 224, 224, 1);
 		border-radius: 8px;
 
-		@include mw(L) {
+		@include mw(XL) {
 			height: 56px;
 			padding: 0 12px;
 			font-size: 14px;
@@ -293,7 +292,7 @@
 		&+& {
 			margin-top: 35px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 16px;
 			}
 		}
@@ -315,7 +314,7 @@
 				background: url('../images/icon/icon_download.svg')no-repeat center/contain;
 			}
 
-			@include mw(L) {
+			@include mw(XL) {
 				display: none;
 			}
 		}
@@ -323,7 +322,7 @@
 		&+.inv_dire_result {
 			margin-top: 110px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 35px;
 			}
 		}
@@ -337,7 +336,7 @@
 		margin: auto;
 
 		&._rev {
-			@include mw(L) {
+			@include mw(XL) {
 				min-width: auto;
 			}
 		}
@@ -351,7 +350,7 @@
 			font-size: 26px;
 			line-height: 95px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				height: 48px;
 				font-size: 12px;
 				line-height: 48px;
@@ -366,7 +365,7 @@
 			background-color: rgba(51, 51, 51, 1);
 			border-radius: 100px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				width: 8px;
 				height: 8px;
 			}
@@ -411,7 +410,7 @@
 			font-size: 26px;
 			font-weight: 400;
 
-			@include mw(L) {
+			@include mw(XL) {
 				height: 40px;
 				font-size: 12px;
 			}
@@ -437,7 +436,7 @@
 		}
 
 		&._enterprise {
-			@include mw(L) {
+			@include mw(XL) {
 				min-width: 592px;
 
 				th {
@@ -452,7 +451,7 @@
 			td {
 				font-size: 18px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					height: 50px;
 					font-size: 14px;
 				}
@@ -464,7 +463,7 @@
 		}
 
 		&._stake {
-			@include mw(L) {
+			@include mw(XL) {
 				min-width: 712px;
 
 				.first {
@@ -490,7 +489,7 @@
 				line-height: 28px;
 				vertical-align: top;
 
-				@include mw(L) {
+				@include mw(XL) {
 					padding: 18px 20px;
 					font-size: 12px;
 					line-height: 20px;
@@ -499,14 +498,14 @@
 		}
 
 		&._dire {
-			@include mw(L) {
+			@include mw(XL) {
 				min-width: 1000px;
 			}
 
 			th {
 				height: 85px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					height: 48px;
 				}
 
@@ -518,7 +517,7 @@
 					line-height: 28px;
 					border-color: rgba(51, 51, 51, 0.2);
 
-					@include mw(L) {
+					@include mw(XL) {
 						font-size: 12px;
 						line-height: 20px;
 					}
@@ -530,7 +529,7 @@
 				font-size: 18px;
 				line-height: 24px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					font-size: 12px;
 				}
 			}
@@ -539,7 +538,7 @@
 				padding-left: 23px;
 				text-align: left;
 
-				@include mw(L) {
+				@include mw(XL) {
 					padding-left: 15px;
 				}
 			}
@@ -575,7 +574,7 @@
 		}
 
 		&._pay {
-			@include mw(L) {
+			@include mw(XL) {
 				min-width: 738px;
 			}
 
@@ -585,7 +584,7 @@
 
 				}
 
-				@include mw(L) {
+				@include mw(XL) {
 					font-size: 12px;
 					line-height: 20px;
 				}
@@ -602,7 +601,7 @@
 					vertical-align: middle;
 				}
 
-				@include mw(L) {
+				@include mw(XL) {
 					font-size: 12px;
 					line-height: 20px;
 				}
@@ -611,7 +610,7 @@
 			.first {
 				min-width: 138px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					min-width: 90px;
 				}
 			}
@@ -619,7 +618,7 @@
 			.sec {
 				min-width: 330px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					min-width: 190px;
 				}
 			}
@@ -629,19 +628,17 @@
 				max-width: 430px;
 			}
 
-			.fir_2 {}
-
 			.forth_2 {
 				min-width: 410px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					min-width: 210px;
 				}
 			}
 		}
 
 		&._t10 {
-			@include mw(L) {
+			@include mw(XL) {
 				min-width: 455px;
 			}
 
@@ -651,7 +648,7 @@
 					font-size: 26px;
 					line-height: 40px;
 
-					@include mw(L) {
+					@include mw(XL) {
 						font-size: 12px;
 						line-height: 20px;
 					}
@@ -661,7 +658,7 @@
 					padding-left: 70px;
 					text-align: left;
 
-					@include mw(L) {
+					@include mw(XL) {
 						padding-left: 16px;
 					}
 				}
@@ -671,18 +668,10 @@
 				padding-left: 70px;
 				text-align: left;
 
-				@include mw(L) {
+				@include mw(XL) {
 					padding-left: 16px;
 				}
 			}
-
-
-			// th:nth-child(2) span,
-			// td:nth-child(2) {
-			// 	padding-right: 70px;
-			// 	padding-left: 70px;
-			// }
-
 		}
 	}
 
@@ -696,14 +685,14 @@
 			font-size: 20px;
 			color: rgba(136, 119, 102, 1);
 
-			@include mw(L) {
+			@include mw(XL) {
 				font-size: 12px;
 			}
 
 			.inv_download+& {
 				margin-top: 50px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-top: 26px;
 				}
 			}
@@ -716,7 +705,7 @@
 		flex-wrap: wrap;
 		margin-top: 130px;
 
-		@include mw(L) {
+		@include mw(XL) {
 			max-width: 340px;
 			margin: 46px auto 0;
 		}
@@ -745,7 +734,7 @@
 				}
 			}
 
-			@include mw(L) {
+			@include mw(XL) {
 				width: calc(50% - 6px);
 				max-width: 164px;
 				margin-bottom: 22px;
@@ -770,7 +759,7 @@
 					content: attr(data-txt);
 				}
 
-				@include mw(L) {
+				@include mw(XL) {
 					width: 100px;
 					height: 24px;
 					font-size: 12px;
@@ -790,7 +779,7 @@
 					font-weight: 400;
 				}
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-top: 10px;
 					font-size: 24px;
 
@@ -804,7 +793,7 @@
 				margin-top: 77px;
 				margin-left: auto;
 
-				@include mw(L) {
+				@include mw(XL) {
 					@include d_f(inline-flex, none, center);
 					margin-top: 8px;
 					font-size: 12px;
@@ -840,12 +829,12 @@
 			.normal_btn+& {
 				margin-top: 90px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-top: 35px;
 				}
 			}
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-bottom: 8px;
 				font-size: 13px;
 			}
@@ -861,7 +850,7 @@
 				font-weight: 400;
 				text-align: left;
 
-				@include mw(L) {
+				@include mw(XL) {
 					height: 34px;
 					font-size: 12px;
 				}
@@ -881,7 +870,7 @@
 					border-bottom-color: rgba(217, 217, 217, 1);
 				}
 
-				@include mw(L) {
+				@include mw(XL) {
 					min-width: 80px;
 					padding-top: 7px;
 					padding-left: 6px;
@@ -897,7 +886,7 @@
 				background-color: rgba(255, 255, 255, 1);
 				border: 1px solid rgba(217, 217, 217, 1);
 
-				@include mw(L) {
+				@include mw(XL) {
 					padding: 6px 8px;
 				}
 
@@ -907,7 +896,7 @@
 					line-height: 41.6px;
 					font-size: 26px;
 
-					@include mw(L) {
+					@include mw(XL) {
 						padding: 0;
 						font-size: 12px;
 						line-height: 20px;
@@ -918,7 +907,7 @@
 			&+.inv_file_title {
 				margin-top: 90px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-top: 34px;
 				}
 			}
@@ -942,7 +931,7 @@
 					background: url('../images/icon/icon_download_tb.svg')no-repeat center/contain;
 				}
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-right: 10px;
 					font-size: 12px;
 
@@ -956,7 +945,7 @@
 			a+a {
 				margin-top: 24px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-top: 12px;
 				}
 			}
@@ -971,7 +960,7 @@
 			max-width: 1577px;
 			padding-left: 40px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				padding-left: 20px;
 			}
 		}
@@ -983,7 +972,7 @@
 			line-height: 40px;
 			list-style-type: disc;
 
-			@include mw(L) {
+			@include mw(XL) {
 				font-size: 12px;
 				line-height: 20px;
 			}
@@ -993,7 +982,7 @@
 		&_tbbox {
 			margin-top: 35px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				overflow-x: auto;
 				margin-top: 8px;
 			}
@@ -1006,7 +995,7 @@
 			font-weight: 700;
 			font-size: 28px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 22px;
 				font-size: 14px;
 			}
@@ -1022,7 +1011,7 @@
 			font-weight: 700;
 			line-height: 45px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				font-size: 12px;
 				line-height: 20px;
 			}
@@ -1038,12 +1027,12 @@
 			&+.inv_labor_title {
 				margin-top: 80px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-top: 20px;
 				}
 			}
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-top: 12px;
 				font-size: 12px;
 				line-height: 20px;
@@ -1058,7 +1047,7 @@
 		&_tbbox {
 			margin-top: 35px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				overflow-x: auto;
 				margin-top: 22px;
 			}
@@ -1073,7 +1062,7 @@
 			.inv_normal_txt+& {
 				margin-top: 24px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					overflow-x: auto;
 					margin-top: 8px;
 				}
@@ -1088,7 +1077,7 @@
 			line-height: 38px;
 			text-align: center;
 
-			@include mw(L) {
+			@include mw(XL) {
 				font-size: 13px;
 				line-height: 18px;
 			}
@@ -1096,7 +1085,7 @@
 			.inv_dire_tbbox+& {
 				margin-top: 110px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-top: 35px;
 				}
 			}
@@ -1104,7 +1093,7 @@
 			&+.inv_download {
 				margin-top: 50px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-top: 22px;
 				}
 			}
@@ -1119,7 +1108,7 @@
 			&+.inv_normal_title {
 				margin-top: 80px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-top: 22px;
 				}
 			}
@@ -1132,7 +1121,7 @@
 				font-weight: 400;
 				line-height: 40px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					height: 40px;
 					font-size: 12px;
 					line-height: 20px;
@@ -1144,7 +1133,7 @@
 					text-align-last: justify;
 					width: 80px;
 
-					@include mw(L) {
+					@include mw(XL) {
 						width: 40px;
 					}
 				}
@@ -1153,7 +1142,7 @@
 			&+.inv_pay_tbbox {
 				margin-top: 34px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					margin-top: 8px;
 				}
 			}
@@ -1165,7 +1154,7 @@
 			padding-right: 20px;
 			text-align: left;
 
-			@include mw(L) {
+			@include mw(XL) {
 				padding-left: 25px;
 				padding-right: 10px;
 			}
@@ -1174,7 +1163,7 @@
 				list-style-type: disc;
 				line-height: 40px;
 
-				@include mw(L) {
+				@include mw(XL) {
 					line-height: 20px;
 				}
 
@@ -1182,7 +1171,7 @@
 					margin-left: -35px;
 					list-style: none;
 
-					@include mw(L) {
+					@include mw(XL) {
 						margin-left: -25px;
 					}
 				}
@@ -1202,7 +1191,7 @@
 					font-weight: 400;
 					line-height: 40px;
 
-					@include mw(L) {
+					@include mw(XL) {
 						font-size: 12px;
 						line-height: 20px;
 					}
@@ -1225,7 +1214,7 @@
 		.firsttb {
 			min-width: 270px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				min-width: 186px;
 			}
 		}
@@ -1237,7 +1226,7 @@
 		.thtb {
 			min-width: 350px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				min-width: 200px;
 			}
 		}
@@ -1247,7 +1236,7 @@
 			vertical-align: top;
 			text-align: left;
 
-			@include mw(L) {
+			@include mw(XL) {
 				padding-left: 35px;
 			}
 		}
@@ -1260,7 +1249,7 @@
 		.inv_table._pay td.codate {
 			padding-left: 26px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				padding-left: 20px;
 			}
 		}
@@ -1274,13 +1263,13 @@
 			text-align: left;
 			vertical-align: top;
 
-			@include mw(L) {
+			@include mw(XL) {
 				padding: 18px;
 			}
 		}
 
 		.inv_table._pay td {
-			@include mw(L) {
+			@include mw(XL) {
 				padding-top: 18px;
 				padding-bottom: 18px;
 			}
@@ -1289,7 +1278,7 @@
 		.firsttb {
 			min-width: 270px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				min-width: 180px;
 			}
 		}
@@ -1297,7 +1286,7 @@
 		.thtb {
 			min-width: 250px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				min-width: 180px;
 			}
 		}
@@ -1308,7 +1297,7 @@
 
 		// .inv_t10_tbbox
 		&_tbbox {
-			@include mw(L) {
+			@include mw(XL) {
 				overflow-x: auto;
 			}
 		}
@@ -1331,7 +1320,7 @@
 	&_switch {
 		margin-top: 70px;
 
-		@include mw(L) {
+		@include mw(XL) {
 			margin-top: 45px;
 
 		}
@@ -1342,7 +1331,7 @@
 
 		&._rev {
 
-			@include mw(L) {
+			@include mw(XL) {
 				width: 100%;
 
 			}
@@ -1355,7 +1344,7 @@
 		font-weight: 400;
 		line-height: 40px;
 
-		@include mw(L) {
+		@include mw(XL) {
 			font-size: 12px;
 			line-height: 20px;
 		}
