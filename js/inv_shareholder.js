@@ -108,7 +108,7 @@ window.onresize = function () {
 		var s = document.querySelector("#" + element.getAttribute("name"));
 		areaArr.push(s.offsetTop);
 	}
-	if (window.innerWidth > 1024) {
+	if (window.innerWidth > 1280) {
 		defaultGo = 123
 	} else {
 		defaultGo = 80
@@ -125,7 +125,7 @@ var yearList_li_count = 0;
 
 (function () {
 	yearList_li[yearList_li_count].classList.add("on");
-	if (window.innerWidth > 1024) {
+	if (window.innerWidth > 1280) {
 		defaultGo = 112;
 		rangeArr = [0, 240, 980, 1190, 1410];
 	} else {
