@@ -1,76 +1,45 @@
 
-window.addEventListener("scroll", scrollListener);
-
-
-var inv_sel = document.querySelector("#inv_term")
-var inv_term_item = document.querySelectorAll("#inv_term li");
-var nameArr = [];
-var areaArr = [];
-var rangeArr = [0, 300, 1012, 2000, 3000];
-var termCount = 0;
-var defaultGo = 112;
+var inv_term_li = document.querySelectorAll("#inv_term li");
+var toparea = [];
+var inv_sel = document.querySelector("#inv_term");
+var inv_selbox_txt = document.querySelector("#inv_selbox_txt");
+var inv_selbox = document.querySelector(".inv_selbox");
 var scrollState = "down";
+var scrollCount = 0;
 
-for (let i = 0; i < inv_term_item.length; i++) {
-	const element = inv_term_item[i];
-	element.getAttribute("name");
-	nameArr.push(element.getAttribute("name"));
-	var s = document.querySelector("#" + element.getAttribute("name"));
-	areaArr.push(s.offsetTop);
+for (let i = 0; i < inv_term_li.length; i++) {
+	const element = inv_term_li[i];
 	element.onclick = function () {
-		window.scrollTo(0, areaArr[i] - 123);
-		var goScroll = areaArr[i] - defaultGo
+		var s = document.querySelector("#" + inv_term_li[i].getAttribute("name"));
+		var goScroll = s.offsetTop - inv_selbox.offsetHeight
 		var nowScroll = window.scrollY;
+
+		scrollCount = i;
+		clear();
 		inv_sel.classList.remove('on');
+		inv_selbox_txt.innerHTML = inv_term_li[i].innerHTML;
+		inv_term_li[i].classList.add('on');
+
 		if (goScroll > nowScroll) {
-			goDown(nowScroll, goScroll)
+			goDown(nowScroll, goScroll);
 			scrollState = "down";
 		} else {
-			goTop(nowScroll, goScroll)
+			goTop(nowScroll, goScroll);
 			scrollState = "top";
 		}
-		// window.scrollTo(0, areaArr[i]-defaultGo);
+		// window.scrollTo(0, s.offsetTop - inv_selbox.offsetHeight);
 	}
-
 }
-function scrollListener() {
-	var nowScroll = window.scrollY;
-	if (nowScroll > rangeArr[4]+defaultGo) {
-		inv_term_item[0].classList.remove('on')
-		inv_term_item[1].classList.remove('on')
-		inv_term_item[2].classList.remove('on')
-		inv_term_item[3].classList.remove('on')
-		inv_term_item[4].classList.add('on')
-		inv_selbox_txt.innerHTML = inv_term_item[4].innerHTML;
-	} else if (nowScroll > rangeArr[3]+defaultGo) {
-		inv_term_item[0].classList.remove('on')
-		inv_term_item[1].classList.remove('on')
-		inv_term_item[2].classList.remove('on')
-		inv_term_item[3].classList.add('on')
-		inv_term_item[4].classList.remove('on')
-		inv_selbox_txt.innerHTML = inv_term_item[3].innerHTML;
-	} else if (nowScroll > rangeArr[2]+defaultGo) {
-		inv_term_item[0].classList.remove('on')
-		inv_term_item[1].classList.remove('on')
-		inv_term_item[2].classList.add('on')
-		inv_term_item[3].classList.remove('on')
-		inv_term_item[4].classList.remove('on')
-		inv_selbox_txt.innerHTML = inv_term_item[2].innerHTML;
-	} else if (nowScroll > rangeArr[1]+defaultGo) {
-		inv_term_item[0].classList.remove('on')
-		inv_term_item[1].classList.add('on')
-		inv_term_item[2].classList.remove('on')
-		inv_term_item[3].classList.remove('on')
-		inv_term_item[4].classList.remove('on')
-		inv_selbox_txt.innerHTML = inv_term_item[1].innerHTML;
-	} else if (nowScroll > rangeArr[0]+defaultGo) {
-		inv_term_item[0].classList.add('on')
-		inv_term_item[1].classList.remove('on')
-		inv_term_item[2].classList.remove('on')
-		inv_term_item[3].classList.remove('on')
-		inv_term_item[4].classList.remove('on')
-		inv_selbox_txt.innerHTML = inv_term_item[0].innerHTML;
+function clear() {
+	for (let i = 0; i < inv_term_li.length; i++) {
+		if (inv_term_li[i].classList.contains('on')) {
+			inv_term_li[i].classList.remove('on');
+		}
 	}
+}
+
+inv_selbox_txt.onclick = function () {
+	inv_sel.classList.toggle('on');
 }
 
 function goTop(from, to) {
@@ -97,74 +66,37 @@ function goDown(from, to) {
 		}
 	}, 0);
 }
-
-window.onresize = function () {
-	nameArr = [];
-	areaArr = [];
-	for (let i = 0; i < inv_term_item.length; i++) {
-		const element = inv_term_item[i];
-		element.getAttribute("name");
-		nameArr.push(element.getAttribute("name"));
-		var s = document.querySelector("#" + element.getAttribute("name"));
-		areaArr.push(s.offsetTop);
+let lastScrollTop = 0;
+function scrollListener() {
+	const scrollTop = document.documentElement.scrollTop;
+	const scrollHeight = document.documentElement.scrollHeight;
+	const clientHeight = document.documentElement.clientHeight;
+	const ss = window.pageYOffset || document.documentElement.scrollTop;
+	toparea = [];
+	for (let i = 0; i < inv_term_li.length; i++) {
+		var s = document.querySelector("#" + inv_term_li[i].getAttribute("name"));
+		toparea.push(s.offsetTop);
 	}
-	if (window.innerWidth > 1280) {
-		defaultGo = 123
+
+	if (ss > lastScrollTop) {
+		// goDown(nowScroll, goScroll)
+		scrollState = "down";
+		if (scrollTop + inv_selbox.offsetHeight >= toparea[scrollCount + 1]) {
+			inv_selbox_txt.innerHTML = inv_term_li[scrollCount + 1].innerHTML;
+			scrollCount++
+		}
 	} else {
-		defaultGo = 80
-		areaArr[2] = 200;
-		areaArr[3] = 400;
-		areaArr[4] = 600;
-	}
-}
-
-
-var yearList = document.querySelector("#yearList");
-var yearList_li = document.querySelectorAll("#yearList > li");
-var yearList_li_count = 0;
-
-(function () {
-	yearList_li[yearList_li_count].classList.add("on");
-	if (window.innerWidth > 1280) {
-		defaultGo = 112;
-		rangeArr = [0, 240, 980, 1190, 1410];
-	} else {
-		defaultGo = 70
-		rangeArr = [0, 140, 370, 515, 620];
-	}
-
-	for (let i = 0; i < areaArr.length; i++) {
-		const element = areaArr[i];
-		if (window.scrollY < element) {
-			inv_term_item[i].classList.add('on')
-			return
+		// goTop(nowScroll, goScroll)
+		scrollState = "top";
+		if (scrollTop + inv_selbox.offsetHeight <= toparea[scrollCount - 1]) {
+			inv_selbox_txt.innerHTML = inv_term_li[scrollCount - 1].innerHTML;
+			scrollCount--;
 		}
 	}
+	scrollCount < 0 ? scrollCount = 0 : scrollCount;
+	clear();
+	inv_term_li[scrollCount].classList.add('on');
 
-})();
-
-function isYearList(s) {
-	if (s == 'inv_allrep') {
-		yearList.classList.remove("on");
-	} else {
-		yearList.classList.add("on");
-	}
+	lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // 為了避免負值
 }
-for (let i = 0; i < yearList_li.length; i++) {
-	const element = yearList_li[i];
-	element.onclick = function () {
-		if (element.innerHTML == 'More') {
-
-		} else {
-			yearList_li[yearList_li_count].classList.remove("on");
-			yearList_li[i].classList.add("on");
-			yearList_li_count = i
-		}
-
-	}
-}
-
-
-inv_selbox_txt.onclick = function () {
-	inv_sel.classList.toggle('on');
-}
+window.addEventListener("scroll", scrollListener);
