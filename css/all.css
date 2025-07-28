@@ -45,6 +45,12 @@ h2 {
     display: none;
   }
 }
+@media screen and (max-width: 1280px) {
+  .inv h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
 .serve_first_txt h2, .serve_second_txt h2 {
   max-width: 485px;
   text-align: left;
@@ -3091,7 +3097,7 @@ h4 .style_X::before, h4 .style_X::after {
   justify-content: center;
   align-items: stretch;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .yearList {
     margin-top: 26px;
   }
@@ -3100,7 +3106,7 @@ h4 .style_X::before, h4 .style_X::after {
   margin-top: 24px;
   margin-bottom: 24px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .yearList._inside {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -3113,7 +3119,7 @@ h4 .style_X::before, h4 .style_X::after {
   list-style: 27px;
   color: rgb(158, 158, 158);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .yearList_item {
     width: 46px;
     font-size: 12px;
@@ -3123,7 +3129,7 @@ h4 .style_X::before, h4 .style_X::after {
 .yearList_item + .yearList_item {
   margin-left: 22px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .yearList_item + .yearList_item {
     margin-left: 0;
   }
@@ -7524,7 +7530,7 @@ h4 .style_X::before, h4 .style_X::after {
   padding-bottom: 330px;
   background-color: rgb(249, 249, 249);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv {
     padding-top: 38px;
     padding-bottom: 50px;
@@ -7539,7 +7545,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-weight: 700;
   line-height: 45px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_normal_title {
     font-size: 14px;
     line-height: 22px;
@@ -7548,7 +7554,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_normal_txt + .inv_normal_title {
   margin-top: 55px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_normal_txt + .inv_normal_title {
     margin-top: 22px;
   }
@@ -7556,7 +7562,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_pay .inv_normal_txt + .inv_normal_title, .inv_audit .inv_normal_txt + .inv_normal_title, .inv_sust .inv_normal_txt + .inv_normal_title, .inv_int .inv_normal_txt + .inv_normal_title, .inv_infos .inv_normal_txt + .inv_normal_title {
   margin-top: 80px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_pay .inv_normal_txt + .inv_normal_title, .inv_audit .inv_normal_txt + .inv_normal_title, .inv_sust .inv_normal_txt + .inv_normal_title, .inv_int .inv_normal_txt + .inv_normal_title, .inv_infos .inv_normal_txt + .inv_normal_title {
     margin-top: 22px;
   }
@@ -7564,7 +7570,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_normal_title + .inv_normal_txt {
   margin-top: 14px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_normal_title + .inv_normal_txt {
     margin-top: 12px;
   }
@@ -7572,7 +7578,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_normal_title + .inv_pay_lists {
   margin-top: 15px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_normal_title + .inv_pay_lists {
     margin-top: 5px;
   }
@@ -7580,7 +7586,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_normal_title + .inv_pay_txt {
   margin-top: 14px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_normal_title + .inv_pay_txt {
     margin-top: 12px;
   }
@@ -7593,7 +7599,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_normal_txt + .inv_normal_txt {
   margin-top: 20px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_normal_txt {
     font-size: 12px;
     line-height: 20px;
@@ -7602,7 +7608,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_normal_txt + .inv_pay_tbbox {
   margin-top: 26px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_normal_txt + .inv_pay_tbbox {
     margin-top: 10px;
   }
@@ -7610,7 +7616,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_pay_tbbox + .inv_normal_txt {
   margin-top: 28px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_pay_tbbox + .inv_normal_txt {
     margin-top: 8px;
   }
@@ -7618,7 +7624,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_audit .inv_normal_txt._cor {
   margin-top: 40px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_audit .inv_normal_txt._cor {
     margin-top: 16px;
   }
@@ -7648,7 +7654,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_selbox + .inv_file_title {
   margin-top: 70px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_selbox + .inv_file_title {
     margin-top: 26px;
   }
@@ -7658,7 +7664,7 @@ h4 .style_X::before, h4 .style_X::after {
     top: 20px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_selbox {
     position: sticky;
     top: 53px;
@@ -7683,7 +7689,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_selbox .recruitment_term .recruitment_term_li.on + .recruitment_term_li::before {
   display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_selbox .recruitment_term {
     position: absolute;
     top: calc(100% - 55px);
@@ -7741,7 +7747,7 @@ h4 .style_X::before, h4 .style_X::after {
   height: 14px;
   background: url("../images/icon/icon_triangle_bottom.svg") no-repeat center/contain;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_selbox_txt {
     display: flex;
   }
@@ -7753,12 +7759,12 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_info.on, .inv_report.on, .inv_revenue.on {
   display: block;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_info, .inv_report, .inv_revenue {
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_info {
     overflow-x: auto;
   }
@@ -7778,7 +7784,7 @@ h4 .style_X::before, h4 .style_X::after {
   border: 1px solid rgb(224, 224, 224);
   border-radius: 8px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_download {
     height: 56px;
     padding: 0 12px;
@@ -7788,7 +7794,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_download + .inv_download {
   margin-top: 35px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_download + .inv_download {
     margin-top: 16px;
   }
@@ -7809,7 +7815,7 @@ h4 .style_X::before, h4 .style_X::after {
   margin-left: 12px;
   background: url("../images/icon/icon_download.svg") no-repeat center/contain;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_download_icon {
     display: none;
   }
@@ -7817,7 +7823,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_download + .inv_dire_result {
   margin-top: 110px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_download + .inv_dire_result {
     margin-top: 35px;
   }
@@ -7828,7 +7834,7 @@ h4 .style_X::before, h4 .style_X::after {
   min-width: 455px;
   margin: auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._rev {
     min-width: auto;
   }
@@ -7841,7 +7847,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-size: 26px;
   line-height: 95px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table_cap {
     height: 48px;
     font-size: 12px;
@@ -7855,7 +7861,7 @@ h4 .style_X::before, h4 .style_X::after {
   background-color: rgb(51, 51, 51);
   border-radius: 100px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table_dot {
     width: 8px;
     height: 8px;
@@ -7893,7 +7899,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-size: 26px;
   font-weight: 400;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table th,
   .inv_table td {
     height: 40px;
@@ -7914,7 +7920,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table._dire tr td {
   font-weight: 500;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._enterprise {
     min-width: 592px;
   }
@@ -7928,7 +7934,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table._enterprise td {
   font-size: 18px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._enterprise td {
     height: 50px;
     font-size: 14px;
@@ -7937,7 +7943,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table._enterprise .date {
   width: 135px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._stake {
     min-width: 712px;
   }
@@ -7959,14 +7965,14 @@ h4 .style_X::before, h4 .style_X::after {
   line-height: 28px;
   vertical-align: top;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._stake td {
     padding: 18px 20px;
     font-size: 12px;
     line-height: 20px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._dire {
     min-width: 1000px;
   }
@@ -7974,7 +7980,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table._dire th {
   height: 85px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._dire th {
     height: 48px;
   }
@@ -7989,7 +7995,7 @@ h4 .style_X::before, h4 .style_X::after {
   line-height: 28px;
   border-color: rgba(51, 51, 51, 0.2);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._dire th span {
     font-size: 12px;
     line-height: 20px;
@@ -8000,7 +8006,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-size: 18px;
   line-height: 24px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._dire td {
     font-size: 12px;
   }
@@ -8009,7 +8015,7 @@ h4 .style_X::before, h4 .style_X::after {
   padding-left: 23px;
   text-align: left;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._dire td:last-child {
     padding-left: 15px;
   }
@@ -8037,7 +8043,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table._dire .last {
   width: 300px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._pay {
     min-width: 738px;
   }
@@ -8045,7 +8051,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table._pay th span {
   font-weight: 700;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._pay th {
     font-size: 12px;
     line-height: 20px;
@@ -8061,7 +8067,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table._pay td:first-child {
   vertical-align: middle;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._pay td {
     font-size: 12px;
     line-height: 20px;
@@ -8070,7 +8076,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table._pay .first {
   min-width: 138px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._pay .first {
     min-width: 90px;
   }
@@ -8078,7 +8084,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table._pay .sec {
   min-width: 330px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._pay .sec {
     min-width: 190px;
   }
@@ -8090,12 +8096,12 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table._pay .forth_2 {
   min-width: 410px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._pay .forth_2 {
     min-width: 210px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._t10 {
     min-width: 455px;
   }
@@ -8105,7 +8111,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-size: 26px;
   line-height: 40px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._t10 th span {
     font-size: 12px;
     line-height: 20px;
@@ -8115,7 +8121,7 @@ h4 .style_X::before, h4 .style_X::after {
   padding-left: 70px;
   text-align: left;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._t10 th:first-child {
     padding-left: 16px;
   }
@@ -8124,7 +8130,7 @@ h4 .style_X::before, h4 .style_X::after {
   padding-left: 70px;
   text-align: left;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_table._t10 td:first-child {
     padding-left: 16px;
   }
@@ -8135,7 +8141,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-size: 20px;
   color: rgb(136, 119, 102);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_revenue_title {
     font-size: 12px;
   }
@@ -8143,7 +8149,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_download + .inv_revenue_title {
   margin-top: 50px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_download + .inv_revenue_title {
     margin-top: 26px;
   }
@@ -8153,7 +8159,7 @@ h4 .style_X::before, h4 .style_X::after {
   flex-wrap: wrap;
   margin-top: 130px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_allrep {
     max-width: 340px;
     margin: 46px auto 0;
@@ -8185,7 +8191,7 @@ h4 .style_X::before, h4 .style_X::after {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_allrep_item {
     width: calc(50% - 6px);
     max-width: 164px;
@@ -8209,7 +8215,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_allrep_item .number::before {
   content: attr(data-txt);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_allrep_item .number {
     width: 100px;
     height: 24px;
@@ -8230,7 +8236,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-size: 26px;
   font-weight: 400;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_allrep_item .yreport {
     margin-top: 10px;
     font-size: 24px;
@@ -8243,7 +8249,7 @@ h4 .style_X::before, h4 .style_X::after {
   margin-top: 77px;
   margin-left: auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_allrep_item .inv_download_icon {
     display: inline-flex;
     justify-content: none;
@@ -8273,12 +8279,12 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_shtbbox + .inv_file_title, .normal_btn + .inv_file_title {
   margin-top: 90px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_shtbbox + .inv_file_title, .normal_btn + .inv_file_title {
     margin-top: 35px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_file_title {
     margin-bottom: 8px;
     font-size: 13px;
@@ -8291,7 +8297,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-weight: 400;
   text-align: left;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_file_tb th,
   .inv_file_tb td {
     height: 34px;
@@ -8310,7 +8316,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_file_tb th:last-child {
   border-bottom-color: rgb(217, 217, 217);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_file_tb th {
     min-width: 80px;
     padding-top: 7px;
@@ -8326,7 +8332,7 @@ h4 .style_X::before, h4 .style_X::after {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(217, 217, 217);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_file_tb td {
     padding: 6px 8px;
   }
@@ -8337,7 +8343,7 @@ h4 .style_X::before, h4 .style_X::after {
   line-height: 41.6px;
   font-size: 26px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_file_tb td span {
     padding: 0;
     font-size: 12px;
@@ -8347,7 +8353,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_file_tb + .inv_file_title {
   margin-top: 90px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_file_tb + .inv_file_title {
     margin-top: 34px;
   }
@@ -8369,7 +8375,7 @@ h4 .style_X::before, h4 .style_X::after {
   margin-right: 16px;
   background: url("../images/icon/icon_download_tb.svg") no-repeat center/contain;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_file_dw a {
     margin-right: 10px;
     font-size: 12px;
@@ -8382,7 +8388,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_file_dw a + a {
   margin-top: 24px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_file_dw a + a {
     margin-top: 12px;
   }
@@ -8391,7 +8397,7 @@ h4 .style_X::before, h4 .style_X::after {
   max-width: 1577px;
   padding-left: 40px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_mana_ul {
     padding-left: 20px;
   }
@@ -8402,7 +8408,7 @@ h4 .style_X::before, h4 .style_X::after {
   line-height: 40px;
   list-style-type: disc;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_mana_item {
     font-size: 12px;
     line-height: 20px;
@@ -8411,7 +8417,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_mana_tbbox {
   margin-top: 35px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_mana_tbbox {
     overflow-x: auto;
     margin-top: 8px;
@@ -8423,7 +8429,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-weight: 700;
   font-size: 28px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_mana_title {
     margin-top: 22px;
     font-size: 14px;
@@ -8434,7 +8440,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-weight: 700;
   line-height: 45px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_labor_title {
     font-size: 12px;
     line-height: 20px;
@@ -8449,12 +8455,12 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_labor_txt + .inv_labor_title {
   margin-top: 80px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_labor_txt + .inv_labor_title {
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_labor_txt {
     margin-top: 12px;
     font-size: 12px;
@@ -8464,7 +8470,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_stake_tbbox {
   margin-top: 35px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_stake_tbbox {
     overflow-x: auto;
     margin-top: 22px;
@@ -8473,7 +8479,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_normal_txt + .inv_dire_tbbox {
   margin-top: 24px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_normal_txt + .inv_dire_tbbox {
     overflow-x: auto;
     margin-top: 8px;
@@ -8486,7 +8492,7 @@ h4 .style_X::before, h4 .style_X::after {
   line-height: 38px;
   text-align: center;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_dire_result {
     font-size: 13px;
     line-height: 18px;
@@ -8495,7 +8501,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_dire_tbbox + .inv_dire_result {
   margin-top: 110px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_dire_tbbox + .inv_dire_result {
     margin-top: 35px;
   }
@@ -8503,7 +8509,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_dire_result + .inv_download {
   margin-top: 50px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_dire_result + .inv_download {
     margin-top: 22px;
   }
@@ -8511,7 +8517,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_pay_lists + .inv_normal_title {
   margin-top: 80px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_pay_lists + .inv_normal_title {
     margin-top: 22px;
   }
@@ -8526,7 +8532,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-weight: 400;
   line-height: 40px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_pay_lists li {
     height: 40px;
     font-size: 12px;
@@ -8540,7 +8546,7 @@ h4 .style_X::before, h4 .style_X::after {
        text-align-last: justify;
   width: 80px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_pay_lists li::before {
     width: 40px;
   }
@@ -8548,7 +8554,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_pay_lists + .inv_pay_tbbox {
   margin-top: 34px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_pay_lists + .inv_pay_tbbox {
     margin-top: 8px;
   }
@@ -8558,7 +8564,7 @@ h4 .style_X::before, h4 .style_X::after {
   padding-right: 20px;
   text-align: left;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_pay_ul {
     padding-left: 25px;
     padding-right: 10px;
@@ -8568,7 +8574,7 @@ h4 .style_X::before, h4 .style_X::after {
   list-style-type: disc;
   line-height: 40px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_pay_ul li {
     line-height: 20px;
   }
@@ -8577,7 +8583,7 @@ h4 .style_X::before, h4 .style_X::after {
   margin-left: -35px;
   list-style: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_pay_ul li.nost {
     margin-left: -25px;
   }
@@ -8593,7 +8599,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-weight: 400;
   line-height: 40px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_pay_txt .inv_pay_ul li {
     font-size: 12px;
     line-height: 20px;
@@ -8608,7 +8614,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_audit .firsttb {
   min-width: 270px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_audit .firsttb {
     min-width: 186px;
   }
@@ -8619,7 +8625,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_audit .thtb {
   min-width: 350px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_audit .thtb {
     min-width: 200px;
   }
@@ -8629,7 +8635,7 @@ h4 .style_X::before, h4 .style_X::after {
   vertical-align: top;
   text-align: left;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_audit .inv_table._pay:not(._ot) td:first-child {
     padding-left: 35px;
   }
@@ -8641,7 +8647,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_audit .inv_table._pay td.codate {
   padding-left: 26px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_audit .inv_table._pay td.codate {
     padding-left: 20px;
   }
@@ -8652,12 +8658,12 @@ h4 .style_X::before, h4 .style_X::after {
   text-align: left;
   vertical-align: top;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_sust .inv_table._pay .codate {
     padding: 18px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_sust .inv_table._pay td {
     padding-top: 18px;
     padding-bottom: 18px;
@@ -8666,7 +8672,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_sust .firsttb {
   min-width: 270px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_sust .firsttb {
     min-width: 180px;
   }
@@ -8674,12 +8680,12 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_sust .thtb {
   min-width: 250px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_sust .thtb {
     min-width: 180px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_t10_tbbox {
     overflow-x: auto;
   }
@@ -8690,7 +8696,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_switch {
   margin-top: 70px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_switch {
     margin-top: 45px;
   }
@@ -8698,7 +8704,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_switch.on {
   display: block;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_switch._rev {
     width: 100%;
   }
@@ -8708,7 +8714,7 @@ h4 .style_X::before, h4 .style_X::after {
   font-weight: 400;
   line-height: 40px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .inv_eCounter {
     font-size: 12px;
     line-height: 20px;

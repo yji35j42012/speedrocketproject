@@ -35,6 +35,14 @@ h2 {
 		}
 	}
 
+	.inv & {
+		@include mw(XL) {
+			font-size: 24px;
+			line-height: 32px;
+
+		}
+	}
+
 	@at-root .serve_first_txt &,
 	.serve_second_txt & {
 		max-width: 485px;
@@ -3142,7 +3150,7 @@ h4 {
 		@include d_f(flex, center);
 	}
 
-	@include mw(L) {
+	@include mw(XL) {
 		margin-top: 26px;
 	}
 
@@ -3150,7 +3158,7 @@ h4 {
 		margin-top: 24px;
 		margin-bottom: 24px;
 
-		@include mw(L) {
+		@include mw(XL) {
 			margin-top: 10px;
 			margin-bottom: 10px;
 		}
@@ -3165,7 +3173,7 @@ h4 {
 		color: rgba(158, 158, 158, 1);
 		@extend %hand;
 
-		@include mw(L) {
+		@include mw(XL) {
 			width: 46px;
 			font-size: 12px;
 			text-align: center;
@@ -3174,7 +3182,7 @@ h4 {
 		&+& {
 			margin-left: 22px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-left: 0;
 			}
 		}
